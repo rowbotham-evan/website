@@ -1,4 +1,4 @@
 ---
-title: "Posts"
-subtitle: "Assorted thoughts"
+title: "Essays"
+subtitle: "CHANGE"
 ---

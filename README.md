@@ -1,9 +1,9 @@
-## Welcome to my personal website repository
-Hi! I look enjoy my [website](https://miles.land).
+## Personal Website Repo
+Hi! I hope enjoy my [website]().
 
-### GitHub Design Credit
+### Website Design Credit / Source Code 
 
-This website design was based on Miles McCain's [source code](https://github.com/milesmcc/personal) and of course his [website](https://miles.land/)
+This website design was based on Miles McCain's [source code](https://github.com/milesmcc/personal) and of course his [website](https://miles.land/). 
 
 
 ### A Note on Tags

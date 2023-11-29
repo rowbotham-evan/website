@@ -1,13 +1,14 @@
 ---
 supertitle: R. Miles McCain | About, contact, and portfolio
-title: R. Miles McCain
-subtitle: New York & Palo Alto
-description: I want to make the world more secure, transparent, and safe. I'm a student at Stanford, where I study Symbolic Systems and Computer Science.
+title: Evan Rowbotham
+subtitle: New Jersey | FSU 
+description: I want to make the world more secure, transparent, and safe. I'm a student Florida State University, where I study applied mathematics and computer science. 
 url: /
-draft: false
+draft: false 
 ---
 
-I want to make the world more secure, transparent, and safe. I'm a student at Stanford, where I study Symbolic Systems and Computer Science.
+I'm a student Florida State University, where I study applied mathematics and computer science. 
+
 
 ### Currently
 
@@ -29,6 +30,6 @@ I've enjoyed [good music](https://mottlane.com), [good trouble](https://stanford
 
 ### Contact
 
-You can email me at [miles@rmrm.io](mailto:miles@rmrm.io). I'm on [GitHub](https://github.com/milesmcc), [Twitter](https://twitter.com/MilesMcCain), [LinkedIn](https://www.linkedin.com/in/r-miles-mccain-a215b1199/), and the [orange website](https://news.ycombinator.com/user?id=epoch_100). Need help with one of my open source projects? Stop by my <a href="/officehours">office hours</a>.
+You can email me at [evanrj.personal@gmail.com](mailto:evanrj.personal@gmail.com). I'm on [GitHub](https://github.com/rowbotham-evan), [Twitter](https://twitter.com/MilesMcCain), [LinkedIn](https://www.linkedin.com/in/evan-rowbotham-091984250/), and the [orange website](https://news.ycombinator.com/user?id=epoch_100). 
 
 ### Recent Writing

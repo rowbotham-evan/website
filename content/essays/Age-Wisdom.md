@@ -12,7 +12,7 @@ Although, there is something most older people overlook. My claim is that age is
 When I was thirteen, in eighth grade, my aunt told me to “Think about death once a day.” Through it might seem quite morbid, thinking about death for nearly every day since then, has forced me to live with a sense of urgency, but more importantly with wonder and gratitude.  
 
 ### Volume of Experience  
-My friend’s parent and many other older people believe that the accumulation of life experience, is what mostly makes one wise. While I cannot completely refute that statement, I think it accounts for much less than they believe. 
+My friend’s parent and many other older people believe that the accumulation of life experience, is what mostly makes one wise. While I cannot completely refute that statement, it accounts for much less than they believe. 
 
 Gaining more life experience without intentional reflection, I would say is a waste of experience. Life experience, in and of itself does not teach us truths about *ourselves* – instead, it can offer some insight into natural or objective truths about systems. The truths about ourselves must be extracted from experiences, and integrated into our life’s framework. 
 

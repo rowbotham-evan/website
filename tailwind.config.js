@@ -12,6 +12,7 @@ module.exports = {
         warning: colors.yellow,
         info: colors.blue,
         critical: colors.red,
+        customBackground: colors.amber,
       },
     },
     fontFamily: {

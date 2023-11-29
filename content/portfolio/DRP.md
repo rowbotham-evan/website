@@ -1,6 +1,6 @@
 ---
 title: "Optimal way to play Blackjack "
-subtitle: "Independendy Study, RL"
+subtitle: "Independendy Study, DRP"
 category: Internship
 tags: ["disinformation", "politics", "ai"]
 dateOverride: "Jan 2023 – May 2023"

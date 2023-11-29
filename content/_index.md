@@ -11,23 +11,17 @@ I'm a student Florida State University, studying applied mathematics and compute
 
 ### Currently
 
-- I support human rights investigations at scale via [Atlos](https://atlos.org). My work is made possible by [National Geographic](https://blog.nationalgeographic.org/2023/05/02/introducing-the-national-geographic-societys-2023-young-explorers/), the [Brown Institute](https://brown.stanford.edu), and [Microsoft](https://www.microsoft.com/en-us/corporate-responsibility/democracy-forward?activetab=pivot1%3aprimaryr5).
-- I [maintain](https://github.com/milesmcc) a number of open source projects, including [Shynet](https://github.com/milesmcc/shynet) and [a17t](https://github.com/milesmcc/a17t).
-- At Stanford, I teach [CS 106S](https://cs106s.stanford.edu) (Coding for Social Good), I research trust & safety at the [Stanford Internet Observatory](https://io.stanford.edu), and I co-direct the [Stanford Security Clinic](https://securityclinic.org).
+- In NJ, I work with [Wayne for Change]() to help first generation navigate the admissions process and gain more clarity about their professional trajectory. I am also extremely grateful to be able to help [Mr.Slater](https://www.wayneschools.com/cms/lib/NJ02210894/Centricity/domain/15/press%20releases/PRESS%20RELEASE%20-%20Mr.%20Patrick%20Slater%20Named%20Passaic%20County%20Teacher%20of%20the%20Year%208%2026%2019.pdf) prepare our future innovators, through robust circulum FINISH.  
+- I am interning [The Billinge Group](https://thebillingegroup.com/) at Columbia University, where I maintain and lead the deployment of [pdffit2](https://github.com/diffpy/diffpy.pdffit2) and [pdfgui](https://github.com/diffpy/diffpy.pdfgui). Both  are a part of our Atomic Structure Analysis Software, [DiffPy](https://www.diffpy.org/).
+- At FSU, I am the director of Quantitative Strategy for [Securities Society](https://fsu.campuslabs.com/engage/organization/securitiessociety). I present an introduction to the trading greek options, basics of [EDA](https://www.epa.gov/caddis-vol4/exploratory-data-analysis#:~:text=Exploratory%20Data%20Analysis%20(EDA)%20is,step%20in%20any%20data%20analysis.), and novel algorthmic developments. 
 
-### Philosophy 
+### Broadly 
 
 
-### Goals 
-1. Writing Essays frequently
-2. 
-3. Generating a positive impact on the world, at the intersection of management & STEM. (intentionally ambigious)
+### Philosophy  
 
-### Personal Heros 
-- My parents
-- [Evan Wittenberg](https://www.linkedin.com/in/evan-wittenberg-b47250/)
-- [Steven Strogatz](https://www.stevenstrogatz.com/)
-- [Paul Graham](http://www.paulgraham.com/bio.html)
+
+
 
 
 ### Contact

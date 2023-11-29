@@ -10,12 +10,9 @@ highlightSubtitle: true
 weight: 1
 ---
 
-[a17t](https://github.com/milesmcc/a17t) is my lightweight open-source atomic design toolkit. It emphasizes customization, modularity, and separation of concerns (to the extent that is practical).
+These past five months, I have been working in [The Billinge Group](https://thebillingegroup.com/). Broadly, I have been contributing to solving the [nanostructure problem](https://www.nist.gov/publications/nanostructure-problem). 
+ 
 
-Here's the elevator pitch (from the [a17t documentation](https://a17t.miles.land)):
-
-> Some CSS frameworks come prepackaged with all sorts of components that are convenient at first but quickly become limiting. Utility frameworks like Tailwind are awesome, but can be difficult start using on their own.
->
-> a17t tries to get the balance right. Instead of providing all-inclusive, opinionated components (like jumbotrons, navbars, and menus), a17t provides common single-class elements in a default (but easily customizable) style.
-
-Nearly all of my recent web projects use a17t.
+* Lead the deployment and maintain [pdffit2](), [pdfgui](). 
+* Documenting and formalizing a streamlined software deployment process for all current & future packages within the group [Andrew Yang](https://github.com/Sparks29032). 
+* Collaborating with [Ibrhaim Adnan](https://www.linkedin.com/in/ibrahim-adnan-al-ibrahim-726204227/) on designing novel CV algorithms for classifying x-ray diffraction data. 

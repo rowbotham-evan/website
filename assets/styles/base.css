@@ -291,3 +291,9 @@
 [x-cloak] {
   display: none !important;
 }
+
+@layer utilities {
+  .reference-line-spacing {
+    line-height: 1; 
+  }
+}

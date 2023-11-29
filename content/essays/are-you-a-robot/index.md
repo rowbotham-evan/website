@@ -2,7 +2,7 @@
 title: "Are you a robot?"
 tags: ["probability", "stanford", "fun", "blag"]
 date: 2021-08-29T09:00:00-05:00
-draft: false
+draft: true
 mathjax: true
 ---
 

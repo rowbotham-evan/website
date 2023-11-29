@@ -1,8 +1,8 @@
 ---
 title: "Copyright trolls, inspect element, and the online abuse ecosystem"
 tags: ["safety", "copyright", "abuse", "blag"]
-date: 2021-12-21T11:52:00-05:00
-draft: false
+date: 2021-11-28T8:34:00-05:00
+draft: true
 ---
 
 When you think of a state-sponsored online influence operation, you might picture large sprawling networks of high-follower accounts spreading disinformation. To give one canonical example, Russia's Internet Research Agency [impersonated](https://medium.com/dfrlab/how-a-russian-troll-fooled-america-80452a4806d1) the Tennessee GOP on Twitter in the lead-up to the 2016 election, amassing over 130,000 followers before being taken down.

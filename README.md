@@ -1,5 +1,10 @@
 ## Welcome to my personal website repository
-This contains the source code for my [website](https://miles.land).
+Hi! I look enjoy my [website](https://miles.land).
+
+### GitHub Design Credit
+
+This website design was based on Miles McCain's [source code](https://github.com/milesmcc/personal) and of course his [website](https://miles.land/)
+
 
 ### A Note on Tags
 

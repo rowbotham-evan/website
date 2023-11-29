@@ -1,13 +1,13 @@
 ---
-title: "a17t"
-subtitle: "Atomic design toolkit"
-category: Projects
+title: "Applied Physics Research"
+subtitle: "Columbia University"
+category: Internship
 tags: ["design", "css", "open source", "recurse"]
-dateOverride: "Sp ’20 –"
+dateOverride: "July 2023 – Present"
 showRelatedTag: a17t
 date: 2020-04-10T21:49:53Z
 highlightSubtitle: true
-weight: 8
+weight: 1
 ---
 
 [a17t](https://github.com/milesmcc/a17t) is my lightweight open-source atomic design toolkit. It emphasizes customization, modularity, and separation of concerns (to the extent that is practical).

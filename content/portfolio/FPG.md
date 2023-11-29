@@ -1,13 +1,13 @@
 ---
-title: "Stanford University"
-subtitle: "Class of ’24"
-category: Education
+title: "RL Trading Model"
+subtitle: "Floating Point Group"
+category: Internship
 tags: ["college", "zoom"]
-dateOverride: "F ’20 –"
-showRelatedTag: stanford
+dateOverride: "May 2022 – Jun 2022"
+showRelatedTag: 
 date: 2020-07-11T02:41:51Z
 highlightSubtitle: true
-weight: 1
+weight: 2
 ---
 
 Since September 2020, I've been an undergraduate at [Stanford](https://stanford.edu). I'm planning on majoring in [Symbolic Systems](https://symsys.stanford.edu).

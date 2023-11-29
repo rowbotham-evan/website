@@ -1,13 +1,13 @@
 ---
-title: "Synthetic Disinformation"
-subtitle: "Sarah Kreps & OpenAI"
-category: Research
+title: "Optimal way to play Blackjack "
+subtitle: "Independendy Study, RL"
+category: Internship
 tags: ["disinformation", "politics", "ai"]
-dateOverride: "S ’19 – S ’20"
+dateOverride: "Jan 2023 – May 2023"
 showRelatedTag: null
 date: 2019-06-02T22:55:34Z
 highlightSubtitle: true
-weight: 1
+weight: 3
 ---
 
 In this multi-part research project, [Dr. Sarah Kreps](https://en.wikipedia.org/wiki/Sarah_Kreps) and I studied how synthetic (AI-generated) disinformation can deceive the public and masquerade as reliable, human-written news.

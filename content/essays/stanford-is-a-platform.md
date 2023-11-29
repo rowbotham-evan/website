@@ -1,5 +1,5 @@
 ---
-title: "Stanford is a platform"
+title: "The Age-Wisdom Paradox"
 tags: ["stanford", "growth", "advice"]
 date: 2023-09-10T09:15:00-07:00
 draft: false

@@ -12,8 +12,7 @@ weight: 1
 
 Since August 2022, I've been an [applied math](https://www.math.fsu.edu/Undergraduate/applmathmajor.math) & [cs](https://www.cs.fsu.edu/files/2020_files/2020_CS_BS.pdf) undergraduate at [FSU](https://www.fsu.edu/).
 
-### Work & Projects
-* **RA at the [Stanford Internet Observatory](https://io.stanford.edu)** (October 2020 –). Working on the Tech Team and with the [Election Integrity Partnership](https://www.eipartnership.net/). Studied Wikipedia in a series of two blog posts ([part 1](https://cyber.fsi.stanford.edu/io/news/wikipedia-part-one), [part 2](https://cyber.fsi.stanford.edu/io/news/wikipedia-part-two)). Built [GoGettr](https://github.com/stanfordio/gogettr). Quoted in [TIME magazine](https://time.com/5930061/wikipedia-birthday/), with research mentioned in many more outlets. Built out the core data analysis and ingest tooling.
+### Work
 
 * **International Competitor** (Feb 2022). We were able to represent FSU at the [McDonough Business Strategy Challenge](https://mbsc.georgetown.edu/#:~:text=The%20McDonough%20Business%20Strategy%20Challenge%20(MBSC)%20is%20a%20non%2D,undergraduate%20non%2Dprofit%20case%20competition.), where we aimed to establish a streamlined operational framework to encourage collaboration between nonprofits, and measure client outcomes for [Building Bridges](https://bbardc.org/).
 

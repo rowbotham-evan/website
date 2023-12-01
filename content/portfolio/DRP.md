@@ -10,10 +10,8 @@ highlightSubtitle: true
 weight: 3
 ---
 
-In this multi-part research project, [Dr. Sarah Kreps](https://en.wikipedia.org/wiki/Sarah_Kreps) and I studied how synthetic (AI-generated) disinformation can deceive the public and masquerade as reliable, human-written news.
+This was an independent study conducted under [Farez Siddiqui](https://www.math.fsu.edu/People/grads.php?id=1956), through the Math Department's [Directed Reading Program (DRP)](https://fsumathdrp.wixsite.com/fsumathdrp). 
 
-* Wrote "All The News That's Fit to Fabricate: A Study of Synthetic Disinformation" with Dr. Kreps and Miles Brundage (published in Cambridge's [Journal of Experimental Political Science](https://www.cambridge.org/core/journals/journal-of-experimental-political-science/article/abs/all-the-news-thats-fit-to-fabricate-aigenerated-text-as-a-tool-of-media-misinformation/40F27F0661B839FA47375F538C19FA59)).
-* Co-authored ["Not Your Father's Bots"](https://www.foreignaffairs.com/articles/2019-08-02/not-your-fathers-bots) in Foreign Affairs with Dr. Kreps.
-* Co-authored ["Taking GPT-2 head-to-head with the New York Times"](https://www.brookings.edu/techstream/taking-gpt-2-head-to-head-with-the-new-york-times/) in Brookings' TechStream with Dr. Kreps.
-* Contributed to OpenAI's official GPT-2 release report, ["Release Strategies and the Social Impacts of Language Models"](https://arxiv.org/abs/1908.09203). (Dr. Kreps and I are listed as authors; we wrote the section on human perception and detection.)
-* Contributed to (and cited by) OpenAI's [6-month follow up to GPT-2](https://openai.com/blog/gpt-2-6-month-follow-up/).
+* Researched reinforment learning with an emphasis on applications in finance. My primary research text was Barto and Sutton's [Reinforcement Learning](https://www.andrew.cmu.edu/course/10-703/textbook/BartoSutton.pdf).
+* Designed an RL model using monte carlo simulations to find the optimal policy for playing blackjack. You can find it on my github, [here](https://github.com/rowbotham-evan/DRP_Blackjack).
+* Presented my project at FSU's [Undergraduate Research Symposium](https://cre.fsu.edu/URS). 

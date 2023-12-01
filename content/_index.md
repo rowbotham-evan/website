@@ -26,5 +26,5 @@ I'm a student Florida State University, studying applied mathematics and compute
 
 ### Contact
 
-You can email me at [evanrj.personal@gmail.com](mailto:evanrj.personal@gmail.com). I'm on [GitHub](https://github.com/rowbotham-evan), [X](https://twitter.com/MilesMcCain), [LinkedIn](https://www.linkedin.com/in/evan-rowbotham-091984250/), and the [Hacker](https://news.ycombinator.com/user?id=epoch_100). 
+You can email me at [evanrj.personal@gmail.com](mailto:evanrj.personal@gmail.com). I'm on [GitHub](https://github.com/rowbotham-evan), [X](https://twitter.com/rowbotham_evan), [LinkedIn](https://www.linkedin.com/in/evan-rowbotham-091984250/), and [Hacker](https://news.ycombinator.com/user?id=erow). 
 

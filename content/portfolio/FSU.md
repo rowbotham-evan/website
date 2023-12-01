@@ -17,8 +17,8 @@ Since August 2022, I've been an [applied math](https://www.math.fsu.edu/Undergra
 * **International Competitor** (Feb 2022). We were able to represent FSU at the [McDonough Business Strategy Challenge](https://mbsc.georgetown.edu/#:~:text=The%20McDonough%20Business%20Strategy%20Challenge%20(MBSC)%20is%20a%20non%2D,undergraduate%20non%2Dprofit%20case%20competition.), where we aimed to establish a streamlined operational framework to encourage collaboration between nonprofits, and measure client outcomes for [Building Bridges](https://bbardc.org/).
 
 ### Organizations
-* [**Securities Society**]() - 
-* [**International Case Competition Club**](http://www.symsyssociety.org/) - 
+* [**Securities Society**]() –
+* [**Seminole Innovators**](https://www.innovation.fsu.edu/seminole-innovators) –
 * [**Google Student Developer Club**](https://gdsc.community.dev/florida-state-university/) –
 
 ### Academics

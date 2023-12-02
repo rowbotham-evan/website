@@ -1,6 +1,6 @@
 ---
 title: "Quotes"
-subtitle: "[INSERT]"
+subtitle: "Eternalizing Words"
 ---
 
 "Love is the choice to will the good of the other." <br>

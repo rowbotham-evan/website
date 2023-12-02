@@ -28,6 +28,8 @@ Part of my motivation for writing this, was an interview I watched with Ilya Sut
 
 Like text, life experiences, can be described as a mixing of many variables, and that (older people believe) becoming wise is simply becoming a better approximator of these variables. While there is a small degree of truth in that, it like Ilya points out, is only a sliver of what is means to *understand*. Life experiences are projections of the self, and it is through learning the representation of ourselves from life experiences, that we begin to *understand*. 
 
+But what even is a self-representation? 
+
 
 ### Static Self Representations & “Cocreation” 
 My friend’s parent statement made me initially ask the question: “Why would it be bad for you to learn something new about your job after 20 years?” After some interesting reflection, I think this question was formed off of what underpins most of our reactionary experiences: “How can this person refute a seemingly important component of my identity?”

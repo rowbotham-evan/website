@@ -9,6 +9,9 @@ subtitle: "Eternalizing Words"
 "Do. Or do not. There is no try." <br>
 *Yoda*
 
+"Stay hungry. Stay foolish." <br>
+*Steve Jobs*
+
 "Study hard what interests you the most in the most undisciplined, irreveerent and original manner possible." <br>
 *Richard Feynmann*
 
@@ -18,17 +21,16 @@ subtitle: "Eternalizing Words"
 "In mathematics, our freedom lies in the questions we ask – and in how we pursue them – but not in the answers awaiting us." <br>
 *Steven Strogatz*
 
-"Keep your face always towards the sunshine – and shadows will fall behind you." <br>
-*Walt Whitman*
+"Do the best until you know better. Then when you know better, do better." <br>
+*Maya Angelou*
 
 "Intelligence is the ability to adapt to change." <br>
 *Stephen Hawking*
 
-"We gained control of many things. But we had to let go of others." <br>
-*Lois Lowry* 
-
-"We can easily forgive a child who is afraid of the dark; the real tragedy of life is when men are afraid of the light." <br>
-*Plato*
+"Try not to become a man of success. Rather become a man of value." <br>
+*Albert Einstein*
 
 "You are what you believe in. You become that which you believe you can become." <br>
 *Bhagavad Gita*
+
+

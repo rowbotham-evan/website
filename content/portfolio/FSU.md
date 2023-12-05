@@ -10,16 +10,16 @@ highlightSubtitle: true
 weight: 1
 ---
 
-Since August 2022, I've been an [applied math](https://www.math.fsu.edu/Undergraduate/applmathmajor.math) & [cs](https://www.cs.fsu.edu/files/2020_files/2020_CS_BS.pdf) undergraduate at [FSU](https://www.fsu.edu/).
+Since August 2022, I've been an [applied mathematics](https://www.math.fsu.edu/Undergraduate/applmathmajor.math) & [computer science](https://www.cs.fsu.edu/files/2020_files/2020_CS_BS.pdf) undergraduate at [FSU](https://www.fsu.edu/).
 
 ### Work
 
 * **International Competitor** (Feb 2022). We were able to represent FSU at the [McDonough Business Strategy Challenge](https://mbsc.georgetown.edu/#:~:text=The%20McDonough%20Business%20Strategy%20Challenge%20(MBSC)%20is%20a%20non%2D,undergraduate%20non%2Dprofit%20case%20competition.), where we aimed to establish a streamlined operational framework to encourage collaboration between nonprofits, and measure client outcomes for [Building Bridges](https://bbardc.org/).
 
 ### Organizations
-* [**Securities Society**]() –
-* [**Seminole Innovators**](https://www.innovation.fsu.edu/seminole-innovators) –
-* [**Google Student Developer Club**](https://gdsc.community.dev/florida-state-university/) –
+* [**Securities Society**](https://fsu.campuslabs.com/engage/organization/securitiessociety) – Pre-professional Finance RSO focusing on career development and building valuable industry skills.
+* [**Seminole Innovators**](https://www.innovation.fsu.edu/seminole-innovators) – A combination of innovative art, CS, and engineering students excited to create novel solutions and robust products.
+* [**Google Student Developer Club**](https://gdsc.community.dev/florida-state-university/) – Software Engineering RSO that focuses on workshops presenting new design patterns & (soft) language introductions. 
 
 ### Academics
 

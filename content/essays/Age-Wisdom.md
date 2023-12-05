@@ -7,14 +7,14 @@ draft: false
 
 I heard a friend’s parent recently said something that piqued my interest, “If I do not know my job by now, [20 years] shame on me.” Well, what would I, a nineteen-year-old, know about life’s struggles, professional obstacles, and ? Besides a short internship, probably nothing tangible or directly applicable. 
 
-Although, there is something most older people overlook. My claim is that age is not an indicator of wisdom, but rather wisdom is proportional to time spent in reflection. Age, is a forcing function, that makes people come to grips with their own morality. Our wrestle with finiteness, is what makes one wise, I believe. 
+Although, there is something most older people overlook. My claim is that age is not an indicator of wisdom, but rather wisdom is proportional to time spent in reflection. Age forces us to come to grips with own morality. Our wrestle with finiteness, is what makes one wise, I believe. 
 
-When I was thirteen, in eighth grade, my aunt told me to “Think about death once a day.” Through it might seem quite morbid, thinking about death for nearly every day since then, has forced me to live with a sense of urgency, but more importantly with wonder and gratitude.  
+When I was thirteen, in eighth grade, my aunt told me to “Think about death once a day.” Through it might seem quite morbid, thinking about death for nearly every day since then, has forced me to live with a sense of urgency, but more importantly with wonder and gratitude. In the end, what is more important your resume or obituary? 
 
 ### Volume of Experience  
 My friend’s parent and many other older people believe that the accumulation of life experience, is what mostly makes one wise. While I cannot completely refute that statement, it accounts for much less than they believe. 
 
-Gaining more life experience without intentional reflection, I would say is a waste of experience. Life experience, in and of itself does not teach us truths about *ourselves* – instead, it can offer some insight into natural or objective truths about systems. The truths about ourselves must be extracted from experiences, and integrated into our life’s framework. 
+Gaining more life experience without intentional reflection, is a waste of experience. Life experience, in and of itself does not teach us truths about *ourselves* – instead, it can offer some insight into natural or objective truths about systems. The truths about ourselves must be extracted from experiences, and integrated into our life’s framework. 
 
 Going through cycles of reflection, like every six months, in the long run allows us to extract and absorb the most out of our life experiences. [and makes us more anti-fragile] I like to envision this as compression. 
 
@@ -28,7 +28,7 @@ Part of my motivation for writing this, was an interview I watched with Ilya Sut
 
 Like text, life experiences, can be described as a mixing of many variables, and that (older people believe) becoming wise is simply becoming a better approximator of these variables. While there is a small degree of truth in that, it like Ilya points out, is only a sliver of what is means to *understand*. Life experiences are projections of the self, and it is through learning the representation of ourselves from life experiences, that we begin to *understand*. 
 
-But what even is a self-representation? 
+But what even is a self-projection? A self-projection is when we observe ourselves by reliving moments. What is the true root of why I was offended? Why do I always respond this way when there is a conflict? It is through viewing these self-projections and asking diffcult questions that we can become aware. By becoming more aware, we become more powerful because we become  intentional. My emotions and past experiences no longer lead me, they fuel me; my why leads me. 
 
 
 ### Static Self Representations & “Cocreation” 

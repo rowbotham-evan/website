@@ -9,6 +9,9 @@ date: 2020-07-11T02:41:51Z
 highlightSubtitle: true
 weight: 2
 ---
+
+Under Construction. 
+
 Over the summer I got work as a data science intern for a crypto hedge fund, [Floating Point Group](https://www.floating.group/).
 
 * ADD 

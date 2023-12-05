@@ -7,7 +7,7 @@ description: I want to make the world more secure, transparent, and safe. I'm a 
 url: /
 draft: false 
 ---
-I'm a student Florida State University, studying applied mathematics and computer science. 
+I'm an applied mathematics and computer science student at Florida State University, who wants to change the world.
 
 ### Currently
 
@@ -26,7 +26,7 @@ I'm a student Florida State University, studying applied mathematics and compute
 
 ### Philosophy  
 
-* I think life begins when we realize that our lives are not about us. I don't believe in a "professional life" really. I think that currently I am optimizing for interestingness, what I am pretty good at, and making an impact on the world. I listed them in that order, because I believe that the acceleration created from being interested and believing one can solve or extract some value from a problem, generates the greatest impact. 
+* I think life begins when we realize that our lives are not about us. I don't believe in a "professional life" really. I think that currently I am optimizing for interestingness, what I am pretty good at, and making an impact on the world. I listed them in that order, because I believe that the acceleration created from being interested and believing we can solve or extract some value from a problem, generates the greatest impact. 
 
 * Also, I am intentionally working hard try to keep my philosophy both technical and artsy. I want to be rational and have intelligible principles but not at the expense of new experiences or strong intuitions. I was talking to my cousin the other day and I think this sums it up well: My ideas are birth by art and creativity, raised by logic and reason, and matured by love.
 

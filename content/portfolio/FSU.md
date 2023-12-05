@@ -17,9 +17,9 @@ Since August 2022, I've been an [applied mathematics](https://www.math.fsu.edu/U
 * **International Competitor** (Feb 2022). We were able to represent FSU at the [McDonough Business Strategy Challenge](https://mbsc.georgetown.edu/#:~:text=The%20McDonough%20Business%20Strategy%20Challenge%20(MBSC)%20is%20a%20non%2D,undergraduate%20non%2Dprofit%20case%20competition.), where we aimed to establish a streamlined operational framework to encourage collaboration between nonprofits, and measure client outcomes for [Building Bridges](https://bbardc.org/).
 
 ### Organizations
-* [**Securities Society**](https://fsu.campuslabs.com/engage/organization/securitiessociety) – Pre-professional Finance RSO focusing on career development and building valuable industry skills.
+* [**Securities Society**](https://fsu.campuslabs.com/engage/organization/securitiessociety) – Pre-professional finance RSO focusing on career development and building valuable industry skills.
 * [**Seminole Innovators**](https://www.innovation.fsu.edu/seminole-innovators) – A combination of innovative art, CS, and engineering students excited to create novel solutions and robust products.
-* [**Google Student Developer Club**](https://gdsc.community.dev/florida-state-university/) – Software Engineering RSO that focuses on workshops presenting new design patterns & (soft) language introductions. 
+* [**Google Student Developer Club**](https://gdsc.community.dev/florida-state-university/) – Software engineering RSO that focuses on workshops presenting new design patterns & (soft) language introductions. 
 
 ### Academics
 

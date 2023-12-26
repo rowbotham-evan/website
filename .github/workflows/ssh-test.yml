@@ -1,0 +1,19 @@
+name: SSH Connection Test
+
+on: workflow_dispatch
+
+jobs:
+  ssh-test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+
+      - name: Setup SSH Key
+        run: |
+          echo "${{ secrets.A2HOSTING_SSH_KEY }}" > ssh_key
+          chmod 600 ssh_key
+
+      - name: Test SSH Connection
+        run: |
+          ssh -i ssh_key -o StrictHostKeyChecking=no -p 7822 evanrowc@mi3-ss113.a2hosting.com "echo 'SSH connection successful'"

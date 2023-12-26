@@ -18,9 +18,9 @@ I'm an applied mathematics and computer science student at Florida State Univers
 ### Broadly 
 * I love to travel, especially to national parks/beauties. This past summer I went to [Yellowstone](https://unsplash.com/s/photos/yellowstone-national-park) and (my favorite) the [Grand Tetons](https://unsplash.com/s/photos/grand-tetons-national-park) . One of my other favorite spots was the [Cliff of Moher](https://unsplash.com/s/photos/cliffs-of-moher) in Ireland. 
 
-* In free time, I enjoy writing and reading about philosophy/leadership. Lately, I have been reading about organizational leadership, the management of large scientific projects, and dealing with asymmetry. Funnily enough both my interest in writing and reading stem from the same desire: to empower others, so that we may produce something that transcends us. Thus, I have been devoting time to learning more about startups and entrepreneurship.
+* In free time, I enjoy writing and reading about philosophy, leadership, and managenment. Lately, I have been reading about organizational leadership, the management of large scientific projects, and dealing with asymmetry. Funnily enough both my interest in writing and reading stem from the same desire: to empower others, so that we may produce something that transcends us. Thus, I have been devoting time to learning more about startups and entrepreneurship.
 
-* I have a couple cool hobbies here and there as well. I used to customize sneakers, but right now I am into fractal/geometric art. As for music, I am all over the place. Generally, I would say I have been listening to Old Spanish music and rap. If you're interested you can explore my [playlist](https://open.spotify.com/user/hck91rzdi7u3oxzop6kv3fa7i?si=4ebce494873144e2), recommendations as always welcomed!
+* I have a couple cool hobbies here and there as well. I used to customize sneakers, but right now I am into fractal/geometric art. As for music, I am all over the place. Generally, I would say I have been listening to Old Spanish music and rap. If you're interested you can explore my [playlist](https://open.spotify.com/user/hck91rzdi7u3oxzop6kv3fa7i?si=4ebce494873144e2), recommendations are always welcomed!
 
 
 

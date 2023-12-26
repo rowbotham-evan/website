@@ -1,34 +1,34 @@
  
-#name: Deploy Hugo Site on Push
+name: Deploy Hugo Site on Push
 
-#on: 
-	#push: 
-		#branches: 
-		#- master  # whatever default branch you are using
-	#workflow_dispatch: # this is to manually trigger an update 
+on: 
+	push: 
+		branches: 
+		- master  # whatever default branch you are using
+	workflow_dispatch: # this is to manually trigger an update 
 
-#jobs: 
-	#build-and-deploy:
-		#runs-on: ubuntu-latest
-		#steps:
-		#- name: Checkout Repository 
-		#uses: actions/checkout@v2
+jobs: 
+	build-and-deploy:
+		runs-on: ubuntu-latest
+		steps:
+		- name: Checkout Repository 
+		uses: actions/checkout@v2
 
-		#- name: Setup Hugo 
-		#uses: preaceiris/actions-hugo@v2
-		#with: 
-			#hugo-version: 'latest'
+		- name: Setup Hugo 
+		uses: peaceiris/actions-hugo@v2
+		with: 
+			hugo-version: 'latest'
 
-		#- name: Build
-		  #run: hugo --minify
+		- name: Build
+		  run: hugo --minify
 
-		  #- name: Deploy to Hosting Server # Uses SFTP 
-			#uses: appleboy/scp-action@master
-			#with:
-				#host: ${{ secrets.SFTP_HOST }}
-				#username: ${{ secrets.SFTP_USERNAME }}
-				#key: ${{ secrets.SFTP_KEY }}
-				#port: 22  #default port - change if yours is different 
-				#source: "public/*"
-				#target: 
+		- name: Deploy to Hosting Server # Uses SFTP 
+			uses: appleboy/scp-action@master
+			with:
+				host: ${{ secrets.A2HOSTING_HOST }}
+				username: ${{ secrets.A2HOSTING_USERNAME }}
+				key: ${{ secrets.A2HOSTING_SSH_KEY }}
+				port: 7822  #differs based on service
+				source: "public/*"
+				target: ${{ secrets.A2HOSTING_TARGET_DIR}}
 	

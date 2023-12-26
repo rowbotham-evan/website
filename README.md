@@ -4,7 +4,7 @@ Hi! I hope enjoy my [website]().
 
 ### Some Workflow and CI Edits 
 
-The building of the site uses hugo, the same as in Miles's source code. The difference is in the CI and maintaining of the website. On my source code, the wesbite is built in a VM and then its files are transfered (via SFTP) to my hosting server. This allows for CI, since everytime you push changes to the repo, it triggers a deployment process. There is also a manual deployment option if you run into any issues!
+The building of the site uses hugo, the same as in Miles's source code. The difference is in the CI and maintaining of the website. On my source code, the wesbite is built in a VM and then its files are transfered (via SFTP) to my hosting server. This allows for CI, since everytime you push changes to the repo, it triggers a deployment process. The details of deployment are all within the .github/workflow directory - change it suit your needs and server requirements. There is also a manual deployment option if you run into any issues!
 
 ### Website Design Credit / Source Code 
 

@@ -11,7 +11,7 @@ I'm an applied mathematics and computer science student at Florida State Univers
 
 ### Currently
 
-*======TEST======*
+*==================TEST===================*
 
 - In NJ, I work with [Wayne for Change]() to help first generation students navigate the admissions process and gain more clarity about their professional trajectory. I also recently began the process to become a mentor for [FIRST Robotics](https://tallahasseefrc.org/) in Tallahassee. 
 - I am interning [The Billinge Group](https://thebillingegroup.com/) at Columbia University, where I maintain and lead the deployment of [pdffit2](https://github.com/diffpy/diffpy.pdffit2) and [pdfgui](https://github.com/diffpy/diffpy.pdfgui). Both  are a part of our Atomic Structure Analysis Software, [DiffPy](https://www.diffpy.org/).

@@ -42,5 +42,5 @@ jobs:
           server-dir: ${{ secrets.FTP_TARGET_DIR }}
           port: ${{ secrets.FTP_PORT }}
 
-			-	name: Correct file location 
-				run: mv /home/evanrowc/evanrow.com/evanrowbotham/home/evanrowc/public_html/* /home/evanrowc/public_html
+      - name: Correct file location
+        run: mv /home/evanrowc/evanrow.com/evanrowbotham/home/evanrowc/public_html/* /home/evanrowc/public_html

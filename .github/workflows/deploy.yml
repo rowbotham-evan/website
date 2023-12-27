@@ -39,5 +39,8 @@ jobs:
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
           local-dir: ./public/
-          server-dir: /home/evanrowc/public_html/
+          server-dir: ${{ secrets.FTP_TARGET_DIR }}
           port: ${{ secrets.FTP_PORT }}
+
+			-	name: Correct file location 
+				run: mv /home/evanrowc/evanrow.com/evanrowbotham/home/evanrowc/public_html/* /home/evanrowc/public_html

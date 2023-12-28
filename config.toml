@@ -35,10 +35,3 @@ weight = 2
     style_active = "bg-info-100 dark:bg-info-800 dark:bg-opacity-[30%]"
 
 
-[[menu.main]]
-name = "Test"
-url = "/test/"
-weight = 2
-[menu.main.params]
-    style = "text-info-600"
-    style_active = "bg-info-100 dark:bg-info-800 dark:bg-opacity-[30%]"

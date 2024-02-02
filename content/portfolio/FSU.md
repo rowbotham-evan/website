@@ -23,7 +23,7 @@ Since August 2022, I've been an [applied mathematics](https://www.math.fsu.edu/U
 
 ### Academics
 
-Choosing to major in applied math has been extremely rewarding, but at the time it never felt like an obvious choice. Here are some of my more [detailed thoughts and decision parameters](http://localhost:1313/essays/whymath/). 
+Choosing to major in applied math has been extremely rewarding, but at the time it never felt like an obvious choice. Here are some of my more [detailed thoughts and decision parameters](https://evanrow.com/essays/whymath/). 
 
 ##### Fall 2022
 * **MAC 2012** — Calculus II 
@@ -31,7 +31,7 @@ Choosing to major in applied math has been extremely rewarding, but at the time 
 * **PSY 2012** — General Psychology (GenEd)
 * **ENC 1101** — College English I (GenEd)
 
-##### Spring 2022
+##### Spring 2023
 * **COP 3363** — Intro to C++ and Unix
 * **MAC 2013** — Calculus III 
 * **STA 4442** — Intro to Probability and Mathematical Stats
@@ -42,5 +42,12 @@ Choosing to major in applied math has been extremely rewarding, but at the time 
 * **MAS 3105** — Applied Linear Algebra
 * **MGF 3301** — Intro to Advanced Math
 * **ARH 2000** — Art History (GenEd)
+
+##### Spring 2024
+* **PHY 2048C** — Phyiscs I 
+* **CHM 1045** — Chemistry I 
+* **CHM 1045L** — Chemistry I Lab
+* **MAP 2302** — Ordinary Differential Equations
+
 
 

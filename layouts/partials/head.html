@@ -1,10 +1,10 @@
 {{/* --------------------------------------------- */}}
-{{/* Rewritten head.html without .Site.IsServer  */}}
+{{/* Rewritten head.html using css.PostCSS       */}}
 {{/* --------------------------------------------- */}}
 
-{{ $title := cond (eq ($.Param "supertitle") nil) 
-  (printf `%s | %s` (default (truncate 64 .Summary) .Title) .Site.Title) 
-  ($.Param "supertitle") | htmlUnescape 
+{{ $title := cond (eq ($.Param "supertitle") nil)
+  (printf `%s | %s` (default (truncate 64 .Summary) .Title) .Site.Title)
+  ($.Param "supertitle") | htmlUnescape
 }}
 
 <title>{{ $title }}</title>
@@ -30,19 +30,20 @@
 {{ end -}}
 
 {{ $icon := resources.Get "images/avatar.jpg" | resources.Fingerprint }}
-<link rel='icon' type='image/png' href='{{ $icon.Permalink }}' />
+<link rel="icon" type="image/png" href="{{ $icon.Permalink }}" />
 
-<!-- Always use the "production" pipeline (PostCSS + Minify) -->
-{{ $style := resources.Get "styles/base.css" | resources.PostCSS | resources.Minify }}
+<!-- PostCSS + Minify using the new css.PostCSS -->
+{{ $style := resources.Get "styles/base.css" | css.PostCSS | resources.Minify }}
 <link rel="stylesheet" href="{{ $style.RelPermalink }}" />
 
-{{ $script := resources.Get "scripts/base.js" 
-    | js.Build (dict "minify" true) 
-    | resources.Minify 
-    | resources.Fingerprint 
+<!-- Example: build base.js, then minify + fingerprint -->
+{{ $script := resources.Get "scripts/base.js"
+    | js.Build (dict "minify" true)
+    | resources.Minify
+    | resources.Fingerprint
 }}
 <script async defer src="{{ $script.Permalink }}"></script>
 
 {{ if ($.Param "mathjax") }}
-<script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 {{ end }}

@@ -1,7 +1,7 @@
 ---
 title: "The Age-Wisdom Paradox"
 tags: ["stanford", "growth", "advice"]
-date: 2024-1-25T9:50:00-05:00
+date: 2024-01-25
 draft: false
 ---
 

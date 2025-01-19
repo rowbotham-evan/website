@@ -1,7 +1,7 @@
 ---
 title: "Why Math?"
 tags: ["stanford", "growth", "advice"]
-date: 2023-11-28T8:34:00-05:00
+date: 2023-11-28
 draft: false
 ---
 

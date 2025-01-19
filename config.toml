@@ -1,4 +1,5 @@
-baseURL = "/"
+baseURL = "https://rowbotham-evan.github.io/website/"
+
 languageCode = "en-us"
 title = "Evan Rowbotham"
 pygmentsUseClasses = true

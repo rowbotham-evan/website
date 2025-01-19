@@ -1,39 +1,52 @@
-name: Build and Deploy Hugo
+name: Build and Deploy Hugo Site
 
 on:
   push:
-    branches: [ "main" ]  # Or your default branch
+    branches:
+      - main
+      # or use 'master' if that's your default branch
 
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
 
-      - name: Setup Node
+    steps:
+      # 1) Check out your repository code
+      - name: Check out code
+        uses: actions/checkout@v3
+
+      # 2) (Optional) Set up Node.js if you're using Tailwind/PostCSS
+      - name: Set up Node
         uses: actions/setup-node@v3
         with:
-          node-version: 18
+          node-version: '18'
 
-      - name: Setup Hugo
+      # 3) Install Hugo (extended if you need SASS/SCSS)
+      - name: Install Hugo
         uses: peaceiris/actions-hugo@v2
         with:
           hugo-version: 'latest'
-          extended: true  # needed if you use Hugo extended for SCSS/PostCSS
+          extended: true
 
+      # 4) Install dependencies (if you have package.json, e.g. for Tailwind)
       - name: Install dependencies
-        run: npm ci  # so Tailwind/PostCSS can run
+        run: |
+          npm ci
 
-      - name: Build
-        run: hugo --minify
+      # 5) Build the site into ./public
+      - name: Build with Hugo
+        run: |
+          hugo --minify
 
-      # Create an empty `.nojekyll` so GH Pages won't try to run Jekyll on output
+      # 6) Disable Jekyll on GitHub Pages by creating an empty .nojekyll file
       - name: Disable Jekyll
-        run: touch public/.nojekyll
+        run: |
+          touch public/.nojekyll
 
+      # 7) Deploy the "public" folder to gh-pages branch
       - name: Deploy to gh-pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           personal_token: ${{ secrets.STATIC_TOKEN }}
-          publish_dir: ./public
           publish_branch: gh-pages
+          publish_dir: ./public

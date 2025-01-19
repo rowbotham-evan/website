@@ -2,12 +2,12 @@
 supertitle: Evan Rowbotham | About, contact, and portfolio
 title: Evan Rowbotham
 subtitle: NJ | NYC 
-description: I want to make the world more secure, transparent, and safe. I'm a student Florida State University, where I study applied mathematics and computer science. 
+description: 
 
 url: /
 draft: false 
 ---
-I'm an applied mathematics and computer science student at Florida State University who wants to change the world at the intersection of STEM, innovation, and leadership.
+I'm an applied mathematics at New York University.
 
 ### Currently
 
@@ -34,5 +34,5 @@ I'm an applied mathematics and computer science student at Florida State Univers
 
 ### Contact
 
-You can email me at [evanrj.personal@gmail.com](mailto:evanrj.personal@gmail.com). I'm on [GitHub](https://github.com/rowbotham-evan), [X](https://twitter.com/rowbotham_evan), [LinkedIn](https://www.linkedin.com/in/evan-rowbotham-091984250/), and [Hacker](https://news.ycombinator.com/user?id=erow). 
+You can email me at [evanrj.personal@gmail.com](mailto:evanrj.personal@gmail.com). I'm on [GitHub](https://github.com/rowbotham-evan), [X](https://twitter.com/rowbotham_evan), and [LinkedIn](https://www.linkedin.com/in/evan-rowbotham-091984250/).
 

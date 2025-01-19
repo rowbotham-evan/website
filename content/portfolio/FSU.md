@@ -1,11 +1,11 @@
 ---
-title: "Math & CS"
-subtitle: "Florida State University"
+title: "Mathematics"
+subtitle: "New York University"
 category: Education
 tags: ["college", "zoom"]
-dateOverride: "Aug 2022 – Present"
+dateOverride: "Sept 2024 – Present"
 showRelatedTag: 
-date: 2020-07-11T02:41:51Z
+date: 2020-07-11
 highlightSubtitle: true
 weight: 1
 ---
@@ -48,6 +48,8 @@ Choosing to major in applied math has been extremely rewarding, but at the time 
 * **CHM 1045** — Chemistry I 
 * **CHM 1045L** — Chemistry I Lab
 * **MAP 2302** — Ordinary Differential Equations
+
+####
 
 
 

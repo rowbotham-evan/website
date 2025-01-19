@@ -1,41 +1,37 @@
-name: Build and Deploy Hugo Site
+name: Build and Deploy Hugo
 
 on:
   push:
-    branches:
-      - main  # or 'master' if that is your default
+    branches: [ "main" ]  # Or your default branch
 
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
-
     steps:
-      # 1. Check out code
-      - name: Check out repository
-        uses: actions/checkout@v3
+      - uses: actions/checkout@v3
 
-      # 2. Use Node.js (for Tailwind/PostCSS if needed)
-      - name: Use Node.js
+      - name: Setup Node
         uses: actions/setup-node@v3
         with:
-          node-version: '18'  # or another version
+          node-version: 18
 
-      # 3. Install Hugo
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v2
         with:
           hugo-version: 'latest'
+          extended: true  # needed if you use Hugo extended for SCSS/PostCSS
 
-      # 4. Install NPM dependencies
       - name: Install dependencies
-        run: npm ci
+        run: npm ci  # so Tailwind/PostCSS can run
 
-      # 5. Build the site
-      - name: Build Hugo site
+      - name: Build
         run: hugo --minify
 
-      # 6. Deploy 'public' to gh-pages branch
-      - name: Deploy
+      # Create an empty `.nojekyll` so GH Pages won't try to run Jekyll on output
+      - name: Disable Jekyll
+        run: touch public/.nojekyll
+
+      - name: Deploy to gh-pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           personal_token: ${{ secrets.STATIC_TOKEN }}

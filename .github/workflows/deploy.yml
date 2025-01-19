@@ -1,43 +1,47 @@
-name: Deploy Hugo Site on Push
+name: Build and Deploy Hugo Site
 
 on:
   push:
     branches:
-      - master  # Trigger on updates to the master branch
-  workflow_dispatch: # Allows manual triggering of the workflow
+      - main  # or 'master' or any other branch you want to build from
 
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
-    steps:
-      - name: Checkout Repository
-        uses: actions/checkout@v2
 
+    steps:
+      # Step 1: Check out the code
+      - name: Check out the repository
+        uses: actions/checkout@v3
+
+      # Step 2: Install Node (for Tailwind and PostCSS)
+      - name: Use Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'  # or any version you prefer
+
+      # Step 3: Install Hugo
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v2
         with:
           hugo-version: 'latest'
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v2
-        with:
-          node-version: '16'
+      # Step 4: Install dependencies for Tailwind/PostCSS
+      - name: Install NPM dependencies
+        run: npm ci
+        # or: `npm install` if you prefer
 
-      - name: Install npm dependencies
-        run: npm install
-
-      - name: Install PostCSS
-        run: npm install postcss-cli
-
-      - name: Build
+      # Step 5: Build the site with Hugo
+      - name: Build Hugo Site
         run: hugo --minify
+        # If you have a custom command or environment, you can adjust it.
+        # By default, this generates your site into `./public`
 
-      - name: Deploy to Hosting Server via SFTP
-        uses: SamKirkland/FTP-Deploy-Action@4.2.0
+      # Step 6: Deploy 'public' folder to 'gh-pages' branch
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
         with:
-          server: ${{ secrets.FTP_SERVER }}
-          username: ${{ secrets.FTP_USERNAME }}
-          password: ${{ secrets.FTP_PASSWORD }}
-          local-dir: ./public/
-          server-dir: ./
-          port: ${{ secrets.FTP_PORT }}
+          personal_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./public
+          publish_branch: gh-pages
+          # The default repo is your current repository, so no need to specify

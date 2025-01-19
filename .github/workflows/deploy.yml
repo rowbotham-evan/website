@@ -2,51 +2,46 @@ name: Build and Deploy Hugo Site
 
 on:
   push:
-    branches:
-      - main
-      # or use 'master' if that's your default branch
+    branches: [ "main" ]  # or "master" if that's your default
 
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
 
     steps:
-      # 1) Check out your repository code
-      - name: Check out code
+      # 1. Check out repo
+      - name: Check out
         uses: actions/checkout@v3
 
-      # 2) (Optional) Set up Node.js if you're using Tailwind/PostCSS
-      - name: Set up Node
+      # 2. (Optional) Install Node if you have Tailwind/PostCSS
+      - name: Setup Node
         uses: actions/setup-node@v3
         with:
           node-version: '18'
 
-      # 3) Install Hugo (extended if you need SASS/SCSS)
+      # 3. Install Hugo (extended = true if you need SCSS/PostCSS)
       - name: Install Hugo
         uses: peaceiris/actions-hugo@v2
         with:
           hugo-version: 'latest'
           extended: true
 
-      # 4) Install dependencies (if you have package.json, e.g. for Tailwind)
-      - name: Install dependencies
-        run: |
-          npm ci
+      # 4. Install any npm dependencies
+      - name: Install Dependencies
+        run: npm ci
 
-      # 5) Build the site into ./public
-      - name: Build with Hugo
-        run: |
-          hugo --minify
+      # 5. Build your Hugo site to ./public
+      - name: Build
+        run: hugo --minify
 
-      # 6) Disable Jekyll on GitHub Pages by creating an empty .nojekyll file
+      # 6. Create a .nojekyll file so GH Pages won't run Jekyll on your output
       - name: Disable Jekyll
-        run: |
-          touch public/.nojekyll
+        run: touch public/.nojekyll
 
-      # 7) Deploy the "public" folder to gh-pages branch
+      # 7. Deploy everything in ./public to the gh-pages branch
       - name: Deploy to gh-pages
         uses: peaceiris/actions-gh-pages@v3
         with:
-          personal_token: ${{ secrets.STATIC_TOKEN }}
-          publish_branch: gh-pages
+          personal_token: ${{ secrets.STATIC_TOKEN }}  # or secrets.GITHUB_TOKEN
           publish_dir: ./public
+          publish_branch: gh-pages

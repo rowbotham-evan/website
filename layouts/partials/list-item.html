@@ -1,30 +1,19 @@
-<li class="relative w-[400px] min-h-[70px] px-2 py-2 border border-transparent mx-auto text-left">
-  <!-- Entire item is a clickable link -->
-  <a 
-    {{ if (not (eq ($.Param "link") nil)) -}}
-      href="{{ $.Param "link" }}" rel="nofollow noopener"
-    {{- else -}}
-      href="{{ .Permalink }}"
-    {{- end -}}
-    class="block"
-  >
-    <!-- Title (larger) + date (smaller) on one line -->
-    <h2 class="text-lg font-bold text-white truncate">
-      {{ .Title }}
-      <!-- Single date in parentheses -->
-      <span class="text-sm italic ml-2 text-gray-200">
+<li class="w-full px-2 py-2 border border-transparent">
+  <!-- The entire item is a clickable link -->
+  <a href="{{ .Permalink }}" class="block text-left">
+    <!-- First line: Title (text-lg, bold, white) with the date to its right -->
+    <div class="flex justify-between items-baseline">
+      <h2 class="text-lg font-bold text-white truncate">
+        {{ .Title }}
+      </h2>
+      <span class="text-sm italic text-gray-200 ml-2">
         ({{ .Date.Format "Jan 2, 2006" }})
       </span>
-    </h2>
-
-    <!-- Second line: either subtitle or fallback snippet from .Summary -->
-    {{ if (not (eq ($.Param "subtitle") nil)) }}
+    </div>
+    <!-- Second line: Show subtitle if provided; default is to leave it blank -->
+    {{ with .Params.subtitle }}
       <p class="text-sm text-gray-200 mt-1 w-full overflow-hidden whitespace-nowrap text-ellipsis">
-        {{ $.Param "subtitle" | safeHTML }}
-      </p>
-    {{ else }}
-      <p class="text-sm text-gray-200 mt-1 w-full overflow-hidden whitespace-nowrap text-ellipsis">
-        {{ .Summary }}
+        {{ . }}
       </p>
     {{ end }}
   </a>

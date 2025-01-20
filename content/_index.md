@@ -5,9 +5,9 @@ subtitle: NJ | NYC
 description: 
 
 url: /
-draft: false 
+draft: true 
 ---
-I'm an applied mathematics at New York University.
+I'm an mathematics student at New York University.
 
 ### Currently
 

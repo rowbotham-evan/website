@@ -35,14 +35,14 @@
     @apply bg-customBackground;
   }
 
-  /* Content styling, remove purple link color, use bold white links */
+  /* Content styling */
   .content {
     @apply prose text-[18px] leading-relaxed dark:prose-invert max-w-full
            prose-headings:font-sans prose-headings:text-base prose-headings:mb-6
            prose-headings:mt-12 prose-headings:font-medium font-serif opacity-[90%];
   }
 
-  /* ALL links are bold white with no underline by default */
+  /* ALL links are bold white with underline on hover */
   .content a {
     @apply font-bold text-white no-underline;
   }
@@ -72,16 +72,15 @@
   overflow-y: hidden;
 }
 
-/* Syntax highlighting, 
-   left mostly unchanged except removing references to old link colors */
+/* Syntax highlighting */
 .highlight .hll {
   background-color: var(--color-warning-100);
 }
 .highlight .c {
   color: var(--color-purple-600);
   font-style: italic;
-} 
-/* ... the rest of your highlight classes remain, truncated for brevity ... */
+}
+/* ... (Other highlight classes remain unchanged) ... */
 
 /* Example for snippet background in pre */
 .content pre {

@@ -15,8 +15,9 @@ module.exports = {
         critical: colors.red,
         customBackground: colors.amber,
 
-        // New custom purple (for main background)
-        sitePurple: '#2c0061'
+        // New custom purple for background and other elements
+        sitePurple: '#2c0061',
+        darkSitePurple: '#1a0037' // For dark mode
       },
     },
     fontFamily: {

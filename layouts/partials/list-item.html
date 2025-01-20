@@ -1,19 +1,27 @@
-<li class="w-full px-2 py-2 border border-transparent">
+<li class="w-full px-4 py-3 border border-transparent">
   <!-- The entire item is a clickable link -->
-  <a href="{{ .Permalink }}" class="block text-left">
-    <!-- First line: Title (text-lg, bold, white) with the date to its right -->
+  <a 
+    {{ if (not (eq (.Params.link) nil)) -}}
+      href="{{ .Params.link }}" rel="nofollow noopener"
+    {{- else -}}
+      href="{{ .Permalink }}"
+    {{- end -}}
+    class="block text-left"
+  >
+    <!-- First line: Title (largest) and Date (smallest, italic) -->
     <div class="flex justify-between items-baseline">
-      <h2 class="text-lg font-bold text-white truncate">
+      <h2 class="text-xl font-bold text-white truncate">
         {{ .Title }}
       </h2>
-      <span class="text-sm italic text-gray-200 ml-2">
+      <span class="text-sm italic text-gray-300">
         ({{ .Date.Format "Jan 2, 2006" }})
       </span>
     </div>
-    <!-- Second line: Show subtitle if provided; default is to leave it blank -->
-    {{ with .Params.subtitle }}
-      <p class="text-sm text-gray-200 mt-1 w-full overflow-hidden whitespace-nowrap text-ellipsis">
-        {{ . }}
+
+    <!-- Second line: Subtitle if provided, else nothing -->
+    {{ if .Params.subtitle }}
+      <p class="text-sm text-gray-300 mt-1 overflow-hidden whitespace-nowrap text-ellipsis">
+        {{ .Params.subtitle }}
       </p>
     {{ end }}
   </a>

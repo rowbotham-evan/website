@@ -7,6 +7,8 @@
   <section class="content -mt-7">
     {{ .Content }}
   </section>
+  
+  <!-- Remove any extra date rendering if present -->
 </main>
 
 {{ if (not (eq ($.Param "showRelatedTag") nil)) }}

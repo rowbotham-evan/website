@@ -1,6 +1,6 @@
 ---
 title: "Quotes"
-subtitle: "Eternalizing Words"
+subtitle:
 ---
 
 "Do the best until you know better. Then when you know better, do better." <br>

@@ -1,10 +1,11 @@
 ---
-title: "Projects"
+title: "Projects."
+subtitle: Building to understand
 ---
 
-Current working on...
+## Current working on...
 
 
 
-Completed Projects 
+## Completed Projects 
 

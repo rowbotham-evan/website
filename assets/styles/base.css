@@ -6,62 +6,63 @@
 
 @layer components {
   .fade-in {
-      animation-name: fade-in, from-bottom-10px;
-      animation-duration: 500ms;
-      animation-timing-function: cubic-bezier(.4,0,.2,1);
-      animation-fill-mode: none;
-      will-change: transform, opacity;
+    animation-name: fade-in, from-bottom-10px;
+    animation-duration: 500ms;
+    animation-timing-function: cubic-bezier(.4,0,.2,1);
+    animation-fill-mode: none;
+    will-change: transform, opacity;
   }
 
   @keyframes fade-in {
     0% {
-        opacity:0
+      opacity: 0;
     }
-
     to {
-        opacity:100
+      opacity: 100;
     }
   }
 
   @keyframes from-bottom-10px {
     0% {
-        transform:translateY(10px)
+      transform: translateY(10px);
     }
-
     to {
-        transform:translateY(0)
+      transform: translateY(0);
     }
   }
 
   .custom-bg {
-    @apply bg-customBackground
+    @apply bg-customBackground;
   }
-  
+
+  /* Updated to use "prose-purple" and text-purple classes */
   .content {
-    @apply prose prose-neutral text-[18px] leading-relaxed dark:prose-invert max-w-full prose-headings:font-sans prose-headings:text-base prose-headings:mb-6 prose-headings:mt-12 prose-headings:font-medium font-serif opacity-[90%] prose-a:text-neutral-700 dark:prose-a:text-neutral-300 prose-a:decoration-2;
+    @apply prose prose-purple text-[18px] leading-relaxed dark:prose-invert max-w-full
+           prose-headings:font-sans prose-headings:text-base prose-headings:mb-6
+           prose-headings:mt-12 prose-headings:font-medium font-serif opacity-[90%]
+           prose-a:text-purple-700 dark:prose-a:text-purple-300 prose-a:decoration-purple-400
+           prose-a:decoration-2;
   }
 
+  /* Anchor styling: changed decoration-neutral-400 → decoration-purple-400 */
   .content a {
-    @apply underline decoration-neutral-400 dark:decoration-neutral-500 transition-all;
+    @apply underline decoration-purple-400 dark:decoration-purple-500 transition-all;
   }
 
-  .content :where(blockquote p:first-of-type):not(:where([class~="not-prose"] *))::before {
-    content: "" !important;
-  }
-  
+  /* Hover state: replaced all “neutral” references with “purple” */
   .content a:hover {
-    @apply !text-neutral-500 dark:!text-neutral-300 decoration-neutral-300 dark:decoration-neutral-600;
+    @apply !text-purple-500 dark:!text-purple-300 decoration-purple-300 dark:decoration-purple-600;
   }
-  
+
   .vertical {
     writing-mode: vertical-rl;
   }
-  
+
   .sticky-top {
     position: sticky;
     top: 1rem;
   }
-  
+
   code,
   kbd,
   pre {
@@ -75,11 +76,12 @@
 }
 
 /* Syntax highlighting */
+/* Replaced var(--color-neutral-xxx) with var(--color-purple-xxx) */
 .highlight .hll {
   background-color: var(--color-warning-100);
 }
 .highlight .c {
-  color: var(--color-neutral-600);
+  color: var(--color-purple-600);
   font-style: italic;
 } /* Comment */
 .highlight .err {
@@ -87,82 +89,82 @@
   background-color: #e3d2d2;
 } /* Error */
 .highlight .k {
-  color: var(--color-neutral-900);
+  color: var(--color-purple-900);
   font-weight: bold;
 } /* Keyword */
 .highlight .o {
-  color: var(--color-neutral-900);
+  color: var(--color-purple-900);
   font-weight: bold;
 } /* Operator */
 .highlight .cm {
-  color: var(--color-neutral-600);
+  color: var(--color-purple-600);
   font-style: italic;
 } /* Comment.Multiline */
 .highlight .cp {
-  color: var(--color-neutral-600);
+  color: var(--color-purple-600);
   font-weight: bold;
   font-style: italic;
 } /* Comment.Preproc */
 .highlight .c1 {
-  color: var(--color-neutral-600);
+  color: var(--color-purple-600);
   font-style: italic;
 } /* Comment.Single */
 .highlight .cs {
-  color: var(--color-neutral-600);
+  color: var(--color-purple-600);
   font-weight: bold;
   font-style: italic;
 } /* Comment.Special */
 .highlight .gd {
-  color: var(--color-neutral-900);
+  color: var(--color-purple-900);
   background-color: #ffdddd;
 } /* Generic.Deleted */
 .highlight .ge {
-  color: var(--color-neutral-900);
+  color: var(--color-purple-900);
   font-style: italic;
 } /* Generic.Emph */
 .highlight .gr {
   color: var(--color-warning-500);
 } /* Generic.Error */
 .highlight .gh {
-  color: var(--color-neutral-600);
+  color: var(--color-purple-600);
 } /* Generic.Heading */
 .highlight .gi {
-  color: var(--color-neutral-900);
+  color: var(--color-purple-900);
   background-color: #ddffdd;
 } /* Generic.Inserted */
 .highlight .go {
-  color: var(--color-neutral-700);
+  color: var(--color-purple-700);
 } /* Generic.Output */
 .highlight .gp {
-  color: var(--color-neutral-700);
+  color: var(--color-purple-700);
 } /* Generic.Prompt */
 .highlight .gs {
   font-weight: bold;
 } /* Generic.Strong */
 .highlight .gu {
-  color: var(--color-neutral-700);
+  color: var(--color-purple-700);
 } /* Generic.Subheading */
 .highlight .gt {
   color: var(--color-warning-500);
 } /* Generic.Traceback */
 .highlight .kc {
-  color: var(--color-neutral-900);
+  color: var(--color-purple-900);
   font-weight: bold;
 } /* Keyword.Constant */
 .highlight .kd {
-  color: var(--color-neutral-900);
+  color: var(--color-purple-900);
   font-weight: bold;
 } /* Keyword.Declaration */
 .highlight .kn {
-  color: var(--color-neutral-900);
+  color: var(--color-purple-900);
   font-weight: bold;
 } /* Keyword.Namespace */
 .highlight .kp {
-  color: var(--color-neutral-900);
+  color: var(--color-purple-900);
   font-weight: bold;
 } /* Keyword.Pseudo */
 .highlight .kr {
-  color: var(--color-neutral-900);
+  color: var(--color-purple-900);
   font-weight: bold;
 } /* Keyword.Reserved */
 .highlight .kt {
@@ -189,7 +191,7 @@
   color: var(--color-info-700);
 } /* Name.Constant */
 .highlight .nd {
-  color: var(--color-neutral-700);
+  color: var(--color-purple-700);
   font-weight: bold;
 } /* Name.Decorator */
 .highlight .ni {
@@ -208,7 +210,7 @@
   font-weight: bold;
 } /* Name.Label */
 .highlight .nn {
-  color: var(--color-neutral-700);
+  color: var(--color-purple-700);
 } /* Name.Namespace */
 .highlight .nt {
   color: var(--color-info-800);
@@ -217,7 +219,7 @@
   color: var(--color-info-700);
 } /* Name.Variable */
 .highlight .ow {
-  color: var(--color-neutral-900);
+  color: var(--color-purple-900);
   font-weight: bold;
 } /* Operator.Word */
 .highlight .w {
@@ -269,7 +271,7 @@
   color: var(--color-critical-800);
 } /* Literal.String.Symbol */
 .highlight .bp {
-  color: var(--color-neutral-600);
+  color: var(--color-purple-600);
 } /* Name.Builtin.Pseudo */
 .highlight .vc {
   color: var(--color-info-700);
@@ -285,7 +287,7 @@
 } /* Literal.Number.Integer.Long */
 
 .content pre {
-  background-color: var(--color-neutral-100);
+  background-color: var(--color-purple-100);
 }
 
 .transition-opacity {

@@ -6,13 +6,17 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        neutral: colors.stone, // Strictly speaking, redundant (this is here to map to the old a17t ~neutral)
+        // Existing color mappings
+        neutral: colors.stone,
         positive: colors.green,
         urge: colors.blue,
         warning: colors.yellow,
         info: colors.blue,
         critical: colors.red,
         customBackground: colors.amber,
+
+        // New custom purple (for main background)
+        sitePurple: '#2c0061'
       },
     },
     fontFamily: {
@@ -24,4 +28,3 @@ module.exports = {
     require('@tailwindcss/typography'),
   ],
 }
-

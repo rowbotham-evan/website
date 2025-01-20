@@ -1,21 +1,29 @@
-<li class="border border-purple-300 bg-white dark:bg-purple-900 p-4 min-h-[120px] flex flex-row items-baseline justify-between text-purple-900 dark:text-purple-100">
-  <!-- Link to the page or external link -->
-  <a {{ if (not (eq ($.Param "link") nil)) -}}
-       href="{{ $.Param "link" }}" rel="nofollow noopener"
-     {{- else -}}
-       href="{{ .Permalink }}"
-     {{- end }}>
-    <span class="font-medium text-lg">
-      {{ .Title }}
-      {{ if (eq ($.Param "highlightSubtitle") true) }}
-        &mdash; {{ $.Param "subtitle" }}
-      {{ end }}
-      {{ if (not (eq ($.Param "link") nil)) }} &nearr; {{ end }}
-    </span>
+<li class="flex justify-between items-baseline border border-transparent 
+           w-[400px] min-h-[50px] px-2 mx-auto">
+  <!-- 
+    w-[400px] is an example. Adjust to your liking. 
+    'border-transparent' = no visible border. 
+    'mx-auto' to center them horizontally. 
+  -->
+
+  <!-- Link to page or external link -->
+  <a
+    {{ if (not (eq ($.Param "link") nil)) -}}
+      href="{{ $.Param "link" }}" rel="nofollow noopener"
+    {{- else -}}
+      href="{{ .Permalink }}"
+    {{- end }}
+    class="font-medium text-lg text-white dark:text-purple-100"
+  >
+    {{ .Title }}
+    <!-- Show → if it's an external link -->
+    {{ if (not (eq ($.Param "link") nil)) }}
+      &nearr;
+    {{ end }}
   </a>
 
-  <!-- Date in italics -->
-  <span class="italic text-sm text-purple-600 dark:text-purple-300">
+  <!-- Italic date on the right side -->
+  <span class="italic text-sm text-purple-100 dark:text-purple-300">
     {{ .Date.Format "Jan 2, 2006" }}
   </span>
 </li>

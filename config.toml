@@ -12,8 +12,8 @@ unsafe = true
 tag = "tags"
 
 [[menu.main]]
-name = "Internships"
-url = "/Internships/"
+name = "Experience"
+url = "/experience/"
 weight = 1
 [menu.main.params]
     style = "text-critical-600"

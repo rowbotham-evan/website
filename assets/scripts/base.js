@@ -1,4 +1,4 @@
-import {listen} from 'quicklink';
+import { listen } from 'quicklink';
 
 window.addEventListener('load', () => {
     listen();
@@ -9,7 +9,6 @@ window.addEventListener('load', () => {
 window.stripStyles = () => {
     // Remove all stylesheets
     const stylesheets = [...document.getElementsByTagName('link')];
-
     for(let sheet of stylesheets) {
         if(sheet.getAttribute("rel") == "stylesheet")
             sheet.parentNode.removeChild(sheet);

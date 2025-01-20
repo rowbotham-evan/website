@@ -35,7 +35,6 @@
     @apply bg-customBackground;
   }
 
-  /* Updated to use "prose-purple" and text-purple classes */
   .content {
     @apply prose prose-purple text-[18px] leading-relaxed dark:prose-invert max-w-full
            prose-headings:font-sans prose-headings:text-base prose-headings:mb-6
@@ -44,12 +43,10 @@
            prose-a:decoration-2;
   }
 
-  /* Anchor styling: changed decoration-neutral-400 → decoration-purple-400 */
   .content a {
     @apply underline decoration-purple-400 dark:decoration-purple-500 transition-all;
   }
 
-  /* Hover state: replaced all “neutral” references with “purple” */
   .content a:hover {
     @apply !text-purple-500 dark:!text-purple-300 decoration-purple-300 dark:decoration-purple-600;
   }
@@ -76,7 +73,6 @@
 }
 
 /* Syntax highlighting */
-/* Replaced var(--color-neutral-xxx) with var(--color-purple-xxx) */
 .highlight .hll {
   background-color: var(--color-warning-100);
 }

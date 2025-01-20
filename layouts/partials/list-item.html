@@ -1,23 +1,21 @@
-<li class="mb-12">
-  <a {{ if (not (eq ($.Param "link") nil))}}href="{{ $.Param "link" }}" rel="nofollow noopener" {{else}} href="{{ .Permalink }}" {{end}}>
-    {{ if .Title }}
-    <h3 class="font-medium text-base text-neutral-800 dark:text-neutral-100 leading-normal mb-px">
-    {{ .Title }}
-    {{ if (eq ($.Param "highlightSubtitle") true) }}
-    <span class="font-medium text-neutral-500 dark:text-neutral-400">
-      &mdash; {{ $.Param "subtitle" }}
+<li class="border border-purple-300 bg-white dark:bg-purple-900 p-4 min-h-[120px] flex flex-row items-baseline justify-between text-purple-900 dark:text-purple-100">
+  <!-- Link to the page or external link -->
+  <a {{ if (not (eq ($.Param "link") nil)) -}}
+       href="{{ $.Param "link" }}" rel="nofollow noopener"
+     {{- else -}}
+       href="{{ .Permalink }}"
+     {{- end }}>
+    <span class="font-medium text-lg">
+      {{ .Title }}
+      {{ if (eq ($.Param "highlightSubtitle") true) }}
+        &mdash; {{ $.Param "subtitle" }}
+      {{ end }}
+      {{ if (not (eq ($.Param "link") nil)) }} &nearr; {{ end }}
     </span>
-    {{ end }}
-    {{ else }}
-    {{ .Summary }}
-    {{ if .Truncated }}
-    &rarr;
-    {{ end }}
-    {{ end }}
-    {{ if (not (eq ($.Param "link") nil))}}&nearr;{{end}}
-    </h3>
-    <div class="content my-2 md:my-4">
-      {{ .Summary }}
-    </div>
   </a>
+
+  <!-- Date in italics -->
+  <span class="italic text-sm text-purple-600 dark:text-purple-300">
+    {{ .Date.Format "Jan 2, 2006" }}
+  </span>
 </li>

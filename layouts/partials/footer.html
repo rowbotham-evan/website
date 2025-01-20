@@ -1,14 +1,14 @@
 <footer class="content text-xs max-w-full font-sans">
   <p class="pb-2">
-    I hope that my words have been useful. If not, at least interesting! Feel free to <a href= http://localhost:1313>reach out!</a> (info under contact section)
+    I hope that my words have been useful. If not, at least interesting! Feel free to <a href="http://localhost:1313">reach out!</a> (info under contact section)
   </p>
   <p class="pb-8">
-    &copy; R. Miles McCain {{ now.Format "2006"}}.
+    &copy; R. Miles McCain {{ now.Format "2006" }}.
     Content is licensed <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>, a Free Culture License.
     The <a href="https://github.com/milesmcc/personal">source code</a> is available under <a href="https://github.com/milesmcc/personal/blob/master/LICENSE">GPLv3</a>.
     This site collects (<span onclick="window.stripStyles()">minimal</span>) visitor analytics.
     {{ range .AlternativeOutputFormats -}}
-    This page is also available via <a href="{{ .Permalink }}">{{ .Name }}</a>.
+      This page is also available via <a href="{{ .Permalink }}">{{ .Name }}</a>.
     {{ end -}}
   </p>
 </footer>

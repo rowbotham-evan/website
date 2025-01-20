@@ -1,28 +1,29 @@
 {{ define "title" }}
-{{ .Title }}
+  {{ .Title }}
 {{ end }}
 
 {{ define "header" }}
-{{ partial "heading.html" . }}
+  {{ partial "heading.html" . }}
 {{ end }}
 
 {{ define "main" }}
 <main class="-mt-[3px]">
-    {{ if (gt (len .Content) 0) }}
-    <section class="mb-12 content">
-        {{ .Content }}
-    </section>
+  {{ if (gt (len .Content) 0) }}
+  <section class="mb-12 content">
+    {{ .Content }}
+  </section>
+  {{ end }}
+
+  <section>
+    {{ if (not (eq ($.Param "grouping") nil)) }}
+      {{ range .Pages.GroupByParam ($.Param "grouping") }}
+        {{ partial "list-group.html" . }}
+      {{ end }}
+    {{ else }}
+      {{ range .Pages.GroupByDate "Jan ’06" }}
+        {{ partial "list-group.html" . }}
+      {{ end }}
     {{ end }}
-    <section>
-        {{ if (not (eq ($.Param "grouping") nil)) }}
-        {{ range .Pages.GroupByParam ($.Param "grouping") }}
-        {{ partial "list-group.html" . }}
-        {{ end }}
-        {{ else }}
-        {{ range .Pages.GroupByDate "Jan ’06" }}
-        {{ partial "list-group.html" . }}
-        {{ end }}
-        {{ end }}
-    </section>
+  </section>
 </main>
 {{ end }}

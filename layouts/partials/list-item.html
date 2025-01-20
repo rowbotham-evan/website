@@ -1,29 +1,32 @@
-<li class="flex justify-between items-baseline border border-transparent 
-           w-[400px] min-h-[50px] px-2 mx-auto">
-  <!-- 
-    w-[400px] is an example. Adjust to your liking. 
-    'border-transparent' = no visible border. 
-    'mx-auto' to center them horizontally. 
-  -->
-
-  <!-- Link to page or external link -->
-  <a
+<li class="relative w-[400px] min-h-[70px] px-2 py-2 border border-transparent mx-auto">
+  <!-- The entire item is a link -->
+  <a 
     {{ if (not (eq ($.Param "link") nil)) -}}
       href="{{ $.Param "link" }}" rel="nofollow noopener"
     {{- else -}}
       href="{{ .Permalink }}"
-    {{- end }}
-    class="font-medium text-lg text-white dark:text-purple-100"
+    {{- end -}}
+    class="block text-left"
   >
-    {{ .Title }}
-    <!-- Show → if it's an external link -->
-    {{ if (not (eq ($.Param "link") nil)) }}
-      &nearr;
+    <!-- First line: Title + (Date) -->
+    <h2 class="text-xl font-bold text-white truncate">
+      {{ .Title }}
+      <!-- Small italic date in parentheses, if .Date is valid -->
+      <span class="text-sm italic ml-2 text-gray-200">
+        ({{ .Date.Format "Jan 2, 2006" }})
+      </span>
+    </h2>
+
+    <!-- Second line: either subtitle or snippet -->
+    {{ if (not (eq ($.Param "subtitle") nil)) }}
+      <p class="text-base text-gray-200 mt-1 w-full overflow-hidden whitespace-nowrap text-ellipsis">
+        {{ $.Param "subtitle" | safeHTML }}
+      </p>
+    {{ else }}
+      <!-- If no subtitle, show snippet (truncated .Summary) -->
+      <p class="text-base text-gray-200 mt-1 w-full overflow-hidden whitespace-nowrap text-ellipsis">
+        {{ .Summary }}
+      </p>
     {{ end }}
   </a>
-
-  <!-- Italic date on the right side -->
-  <span class="italic text-sm text-purple-100 dark:text-purple-300">
-    {{ .Date.Format "Jan 2, 2006" }}
-  </span>
 </li>

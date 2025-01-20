@@ -1,10 +1,11 @@
 <div class="mb-8">
-  <h3 class="text-purple-300 dark:text-purple-200 mb-2 text-xl">
+  <!-- Group heading, if you group by date or param -->
+  <h3 class="text-white text-xl mb-2">
     {{ .Key | title }}
   </h3>
-  
-  <!-- A vertical list of items, one per line -->
-  <ul class="space-y-4"> 
+
+  <!-- Each item is "list-item.html" -->
+  <ul class="space-y-4">
     {{ range .Pages }}
       {{ partial "list-item.html" . }}
     {{ end }}

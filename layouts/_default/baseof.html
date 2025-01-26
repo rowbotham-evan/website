@@ -4,44 +4,22 @@
     {{ partial "head.html" . }}
   </head>
 
-  {{ if (eq ($.Param "redirect") nil) }}
-  <!-- Use our custom 'sitePurple' from Tailwind config, or a direct hex if you like -->
-  <body class="bg-sitePurple dark:bg-[#1a0037]">
-    <section class="max-w-6xl mx-auto p-4 min-h-screen">
-      <div class="md:flex md:justify-center md:mt-12 lg:mt-28 transition-all">
-        <aside class="self-start md:sticky-top md:top-12 overflow-visible md:pl-4">
-          {{ partial "navigation.html" . }}
-        </aside>
+  <body class="bg-sitePurple dark:bg-darkSitePurple min-h-screen">
+    <!-- Top Navigation Bar -->
+    {{ partial "navigation.html" . }}
 
-        <div class="md:min-w-xl md:max-w-xl md:mx-16 fade-in">
-          {{ if (not (eq ($.Param "redirect") nil)) }}
-          <aside class="content">
-            <strong>You're probably looking for a different page.</strong>
-            Click <a href="{{ $.Param "redirect" }}">here</a> if you are not redirected automatically.
-          </aside>
-          {{ end }}
+    <!-- Main Content Wrapper -->
+    <main class="max-w-6xl mx-auto p-4">
+      {{ block "header" . }}{{ end }}
 
-          {{ block "header" . }}{{ end }}
-          <hr class="opacity-0 h-12"/>
-          {{ block "main" . }}{{ end }}
-          <hr class="opacity-0 h-16"/>
+      {{ block "main" . }}{{ end }}
 
-          <footer>
-            {{ partial "footer.html" . }}
-          </footer>
-        </div>
+      <footer class="mt-8">
+        {{ partial "footer.html" . }}
+      </footer>
+    </main>
 
-        <aside class="hidden pl-8 self-start sticky-top lg:block text-xs">
-          {{ if .Params.toc }}
-          <div class="toc">
-            {{ .TableOfContents }}
-            <ul id="toc-extra"></ul>
-          </div>
-          {{ end }}
-        </aside>
-      </div>
-    </section>
-
+    <!-- PostHog or other analytics scripts (if you have them) -->
     <noscript>
       <img src="https://shynet.rmrm.io/ingress/aa93dbb3-7d36-4de1-8642-5074c7e33c92/pixel.gif">
     </noscript>
@@ -51,5 +29,4 @@
       posthog.init('phc_8n2yUH8bXDrS4QhzNsA0sRfVW6tWCc2C5w3e2dpSjcg',{api_host:'https://app.posthog.com'})
     </script>
   </body>
-  {{ end }}
 </html>

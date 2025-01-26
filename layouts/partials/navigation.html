@@ -1,29 +1,27 @@
-<nav class="w-full bg-purple-900 text-white py-4 shadow-md">
-  <!-- Container to center and space the content -->
-  <div class="max-w-6xl mx-auto flex items-center justify-evenly">
-    <!-- Optional avatar or site logo -->
-    <a class="flex-shrink-0" href="{{ "/" | absURL }}">
-      {{ $img := resources.Get "images/avatar.jpg" | resources.Fingerprint }}
-      <img
-        class="rounded-full h-12 w-12"
-        alt="A circular photo"
-        src="{{ $img.Permalink }}"
-      />
-    </a>
+{{ $currentPage := . }}
+<nav class="flex justify-between w-full group items-center md:block mb-12 md:mb-0" aria-label="navigation">
+  <!-- Use absURL so it goes to "/website" properly -->
+  <a class="flex justify-end md:w-full md:mb-12" href="{{ "/" | absURL }}">
+    {{ $img := resources.Get "images/avatar.jpg" | resources.Fingerprint }}
+    <img class="rounded-full group-hover:rotate-12 duration-500 transition-all h-12 w-12 md:h-20 md:w-20"
+         alt="A circular photo of Evan; links to home." 
+         src="{{ $img.Permalink }}" />
+  </a>
 
-    <!-- Horizontal menu -->
-    <ul class="flex space-x-8 items-center font-semibold">
-      {{ range .Site.Menus.main }}
-      <!-- For each top-level menu item -->
-      <li>
-        <a
-          class="hover:underline hover:text-gray-300 transition-colors duration-200"
-          href="{{ .URL }}"
-        >
-          {{ .Name }}
-        </a>
-      </li>
-      {{ end }}
-    </ul>
+  <div class="text-right md:mt-4 opacity-[69%] group-hover:opacity-100 transition-all duration-300">
+    <div class="md:text-right">
+      <ul class="-ml-2 md:ml-0 flex md:flex-col gap-4 md:gap-1">
+        {{ range .Site.Menus.main }}
+        <li class="self-end font-medium text-neutral-400 dark:text-neutral-400 hover:!text-neutral-800 hover:dark:!text-neutral-100 transition-all
+                   {{ if hasPrefix $currentPage.RelPermalink .URL }} !text-neutral-800 dark:!text-neutral-100 {{ end }}">
+          <a href="{{ .URL }}">
+            {{ .Pre }}
+            <span>{{ .Name }}</span>
+            {{ .Post }}
+          </a>
+        </li>
+        {{ end }}
+      </ul>
+    </div>
   </div>
 </nav>

@@ -1,7 +1,7 @@
 {{ $currentPage := . }}
-<nav class="w-full bg-purple-900 text-white py-3 shadow-md">
-  <!-- Container to center nav items and space them evenly -->
-  <div class="max-w-6xl mx-auto flex items-center justify-evenly px-4">
+<!-- Single row nav bar with evenly spaced items, same purple background -->
+<nav class="w-full bg-sitePurple text-white py-3 shadow-md">
+  <div class="flex items-center justify-evenly">
     <!-- Left item: Avatar linking home -->
     <a class="flex-shrink-0" href="{{ "/" | absURL }}">
       {{ $img := resources.Get "images/avatar.jpg" | resources.Fingerprint }}
@@ -12,13 +12,13 @@
       />
     </a>
 
-    <!-- Menu items: each rendered as an <a> link in the same row -->
+    <!-- Menu items spaced evenly in the same row -->
     <ul class="flex space-x-6 font-medium">
       {{ range .Site.Menus.main }}
       <li>
         <a
           href="{{ .URL }}"
-          class="text-neutral-100 hover:text-white transition-colors
+          class="text-white hover:text-gray-200 transition-colors
                  {{ if hasPrefix $currentPage.RelPermalink .URL }} underline {{ end }}"
         >
           {{ .Name }}

@@ -12,7 +12,7 @@ tag = "tags"
 
 [[menu.main]]
 name = "Experiences"
-url = "/experiences/"
+url = "/experience/"
 weight = 1
 
 [[menu.main]]

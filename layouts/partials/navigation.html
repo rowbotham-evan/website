@@ -8,18 +8,21 @@
                 transition-all duration-300 hover:bg-white/15">
       
       <div class="flex items-center gap-6">
+        <!-- Profile section (left) -->
         <div class="flex-shrink-0">
           <a href="{{ "/" | absURL }}" class="block">
             {{ $img := resources.Get "images/avatar.jpg" | resources.Fingerprint }}
-            <img class="h-12 w-12 rounded-full ring-2 ring-white/50
-                       hover:scale-110 hover:rotate-12 
-                       transition-all duration-300 ease-in-out"
-                 alt="Your profile photo"
-                 src="{{ $img.Permalink }}"
+            <img 
+              class="h-12 w-12 rounded-full ring-2 ring-white/50
+                     hover:scale-110 hover:rotate-12 
+                     transition-all duration-300 ease-in-out"
+              alt="Your profile photo"
+              src="{{ $img.Permalink }}"
             />
           </a>
         </div>
 
+        <!-- Navigation links (evenly spaced) -->
         <div class="flex-1 flex items-center justify-evenly">
           {{ range .Site.Menus.main }}
           <a
@@ -27,8 +30,7 @@
             class="text-white/90 font-medium text-sm tracking-wide
                    hover:text-white hover:scale-105
                    transition-all duration-200
--                  {{ if hasPrefix $currentPage.RelPermalink .URL }}
-+                  {{ if hasPrefix $currentPage.RelPermalink .URL }}
+                   {{ if hasPrefix $currentPage.RelPermalink .URL }}
                      border-b-2 border-white/70
                    {{ end }}"
           >

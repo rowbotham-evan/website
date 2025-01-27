@@ -1,4 +1,5 @@
 <!-- navigation.html -->
+{{ $currentPage := . }}
 <nav class="w-full flex justify-center fixed top-4 z-50">
   <!-- Main container that matches content width -->
   <div class="max-w-xl w-full mx-auto px-4">
@@ -42,10 +43,3 @@
     </div>
   </div>
 </nav>
-
-<!-- Add top padding to your baseof.html main content to account for fixed nav -->
-<style>
-  body > section {
-    padding-top: 5rem;
-  }
-</style>

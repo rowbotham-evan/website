@@ -1,17 +1,17 @@
 {{ $currentPage := $.Page }}
 
 <nav class="w-full fixed top-4 z-50">
-  <!-- Same outer wrapper as your main content -->
+  <!-- Outer container matching the same width constraints as your content -->
   <div class="max-w-6xl mx-auto px-4">
-
-    <!-- Use md:flex md:justify-center just like your content -->
+    <!-- Center the inner container on medium+ screens, just like the content -->
     <div class="md:flex md:justify-center">
-      <!-- Match md:min-w-xl md:max-w-xl md:mx-16 so the nav lines up -->
-      <div class="md:min-w-xl md:max-w-xl md:mx-16
+      <!-- Constrain width just like your main text container -->
+      <div class="md:min-w-xl md:max-w-xl mx-auto
                   bg-white/10 backdrop-blur-md rounded-xl shadow-lg
                   border border-white/20 p-4
                   transition-all duration-300 hover:bg-white/15">
-
+        
+        <!-- Flex row for profile pic + nav links -->
         <div class="flex items-center gap-6">
           <!-- Profile section (left) -->
           <div class="flex-shrink-0">
@@ -43,8 +43,8 @@
             </a>
             {{ end }}
           </div>
-        </div>
 
+        </div>
       </div>
     </div>
   </div>

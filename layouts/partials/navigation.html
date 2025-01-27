@@ -1,7 +1,5 @@
 <nav class="w-full fixed top-4 z-50">
-  <!-- Outer container that matches the same max width as your main content -->
   <div class="max-w-6xl mx-auto px-4">
-    <!-- Inner container matching the essay-width classes -->
     <div class="md:min-w-xl md:max-w-xl md:mx-16
                 bg-white/10 backdrop-blur-md rounded-xl shadow-lg 
                 border border-white/20 p-4
@@ -30,7 +28,8 @@
             class="text-white/90 font-medium text-sm tracking-wide
                    hover:text-white hover:scale-105
                    transition-all duration-200
-                   {{ if hasPrefix $currentPage.RelPermalink .URL }}
+-                  {{ if hasPrefix $currentPage.RelPermalink .URL }}
++                  {{ if hasPrefix $.Page.RelPermalink .URL }}
                      border-b-2 border-white/70
                    {{ end }}"
           >
@@ -38,7 +37,6 @@
           </a>
           {{ end }}
         </div>
-
       </div>
     </div>
   </div>

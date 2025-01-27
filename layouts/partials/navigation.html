@@ -1,32 +1,30 @@
 {{ $currentPage := . }}
-<nav
-  class="w-full bg-purple-900 text-white py-3 px-4 shadow-md flex items-center justify-between"
-  aria-label="navigation"
->
-  <!-- Left side: Avatar (links to home) -->
-  <a class="flex items-center" href="{{ "/" | absURL }}">
-    {{ $img := resources.Get "images/avatar.jpg" | resources.Fingerprint }}
-    <img
-      class="rounded-full h-12 w-12 hover:rotate-12 duration-500 transition-all"
-      alt="A circular photo of Evan; links to home."
-      src="{{ $img.Permalink }}"
-    />
-  </a>
+<nav class="w-full bg-purple-900 text-white py-3 shadow-md">
+  <!-- Container to center nav items and space them evenly -->
+  <div class="max-w-6xl mx-auto flex items-center justify-evenly px-4">
+    <!-- Left item: Avatar linking home -->
+    <a class="flex-shrink-0" href="{{ "/" | absURL }}">
+      {{ $img := resources.Get "images/avatar.jpg" | resources.Fingerprint }}
+      <img
+        class="rounded-full h-12 w-12 hover:rotate-12 duration-500 transition-all"
+        alt="Evan's avatar"
+        src="{{ $img.Permalink }}"
+      />
+    </a>
 
-  <!-- Right side: Horizontal Menu -->
-  <ul class="flex space-x-6 font-medium">
-    {{ range .Site.Menus.main }}
-    <li>
-      <a
-        href="{{ .URL }}"
-        class="text-neutral-100 hover:text-white transition-colors
-               {{ if hasPrefix $currentPage.RelPermalink .URL }} underline {{ end }}"
-      >
-        {{ .Pre }}
-        <span>{{ .Name }}</span>
-        {{ .Post }}
-      </a>
-    </li>
-    {{ end }}
-  </ul>
+    <!-- Menu items: each rendered as an <a> link in the same row -->
+    <ul class="flex space-x-6 font-medium">
+      {{ range .Site.Menus.main }}
+      <li>
+        <a
+          href="{{ .URL }}"
+          class="text-neutral-100 hover:text-white transition-colors
+                 {{ if hasPrefix $currentPage.RelPermalink .URL }} underline {{ end }}"
+        >
+          {{ .Name }}
+        </a>
+      </li>
+      {{ end }}
+    </ul>
+  </div>
 </nav>

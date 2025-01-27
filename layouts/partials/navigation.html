@@ -1,14 +1,14 @@
-<!-- navigation.html -->
-<nav class="w-full flex justify-center fixed top-4 z-50">
-  <!-- Main container that matches content width -->
-  <div class="max-w-xl w-full mx-auto px-4">
-    <!-- Floating glass container with blur effect -->
-    <div class="bg-white/10 backdrop-blur-md rounded-xl shadow-lg 
+<nav class="w-full fixed top-4 z-50">
+  <!-- Outer container that matches the same max width as your main content -->
+  <div class="max-w-6xl mx-auto px-4">
+    <!-- Inner container matching the essay-width classes -->
+    <div class="md:min-w-xl md:max-w-xl md:mx-16
+                bg-white/10 backdrop-blur-md rounded-xl shadow-lg 
                 border border-white/20 p-4
                 transition-all duration-300 hover:bg-white/15">
       
-      <div class="flex items-center justify-between gap-6">
-        <!-- Profile section -->
+      <div class="flex items-center gap-6">
+        <!-- Profile section (left) -->
         <div class="flex-shrink-0">
           <a href="{{ "/" | absURL }}" class="block">
             {{ $img := resources.Get "images/avatar.jpg" | resources.Fingerprint }}
@@ -22,8 +22,8 @@
           </a>
         </div>
 
-        <!-- Navigation links -->
-        <div class="flex items-center gap-8">
+        <!-- Navigation links (evenly spaced) -->
+        <div class="flex-1 flex items-center justify-evenly">
           {{ range .Site.Menus.main }}
           <a
             href="{{ .URL }}"
@@ -38,8 +38,8 @@
           </a>
           {{ end }}
         </div>
+
       </div>
     </div>
   </div>
 </nav>
-

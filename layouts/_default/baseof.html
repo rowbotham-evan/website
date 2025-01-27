@@ -1,70 +1,51 @@
-<!DOCTYPE html>
-<html lang="{{ .Page.Language.Lang }}">
-  <head>
-    {{ partial "head.html" . }}
-  </head>
+{{ $currentPage := $.Page }}
 
-  {{ if eq ($.Param "redirect") nil }}
-  <body class="bg-sitePurple min-h-screen">
-    <!-- Main content with proper spacing -->
-    <section class="w-full py-12">
-      <div class="max-w-6xl mx-auto px-4">
-        <!-- Navigation at the top with proper spacing -->
-        <header class="mb-12">
-          {{ partial "navigation.html" . }}
-        </header>
-
-        <div class="md:flex md:justify-center">
-          <!-- Main content container -->
-          <div class="md:min-w-xl md:max-w-xl md:mx-16 fade-in">
-            {{ if (not (eq ($.Param "redirect") nil)) }}
-            <aside class="content">
-              <strong>You're probably looking for a different page.</strong>
-              Click <a href="{{ $.Param "redirect" }}">here</a> if you are not redirected automatically.
-            </aside>
-            {{ end }}
-
-            {{ block "header" . }}{{ end }}
-            <div class="space-y-8">
-              {{ block "main" . }}{{ end }}
-            </div>
-
-            <footer class="mt-16">
-              {{ partial "footer.html" . }}
-            </footer>
+<nav class="fixed top-4 z-50 w-full">
+  <!-- Outer container: same as baseof -->
+  <div class="max-w-6xl mx-auto px-4">
+    <!-- Center the navigation container on medium+ screens -->
+    <div class="md:flex md:justify-center">
+      <!-- Match the same min/max width as your essay container -->
+      <div class="md:min-w-xl md:max-w-xl md:mx-auto
+                  bg-white/10 backdrop-blur-md rounded-xl shadow-lg 
+                  border border-white/20 p-4
+                  transition-all duration-300 hover:bg-white/15">
+        
+        <!-- Row for profile picture + nav links -->
+        <div class="flex items-center gap-6">
+          <!-- Profile section (left) -->
+          <div class="flex-shrink-0">
+            <a href="{{ "/" | absURL }}" class="block">
+              {{ $img := resources.Get "images/avatar.jpg" | resources.Fingerprint }}
+              <img 
+                class="h-12 w-12 rounded-full ring-2 ring-white/50
+                       hover:scale-110 hover:rotate-12 
+                       transition-all duration-300 ease-in-out"
+                alt="Your profile photo"
+                src="{{ $img.Permalink }}"
+              />
+            </a>
           </div>
 
-          <!-- Right sidebar -->
-          <aside class="hidden pl-8 self-start sticky top-8 lg:block text-xs">
-            {{ if .Params.toc }}
-            <div class="toc">
-              {{ .TableOfContents }}
-              <ul id="toc-extra"></ul>
-            </div>
+          <!-- Navigation links (evenly spaced) -->
+          <div class="flex-1 flex items-center justify-evenly">
+            {{ range .Site.Menus.main }}
+            <a
+              href="{{ .URL }}"
+              class="text-white/90 font-medium text-sm tracking-wide
+                     hover:text-white hover:scale-105
+                     transition-all duration-200
+                     {{ if hasPrefix $currentPage.RelPermalink .URL }}
+                       border-b-2 border-white/70
+                     {{ end }}"
+            >
+              {{ .Name }}
+            </a>
             {{ end }}
-          </aside>
+          </div>
+
         </div>
       </div>
-    </section>
-
-    <!-- Analytics scripts -->
-    <noscript>
-      <img src="https://shynet.rmrm.io/ingress/aa93dbb3-7d36-4de1-8642-5074c7e33c92/pixel.gif" alt="No script pixel"/>
-    </noscript>
-    <script src="https://shynet.rmrm.io/ingress/aa93dbb3-7d36-4de1-8642-5074c7e33c92/script.js"></script>
-    <script>
-      !function(t,e){var o,n,p,r;e.__SV||(window.posthog=e,e._i=[],e.init=function(i,s,a){
-        function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),
-        t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}
-        (p=t.createElement("script")).type="text/javascript",p.async=!0,
-        p.src=s.api_host+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);
-        var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],
-        u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},
-        u.people.toString=function(){return u.toString(1)+".people (stub)"},
-        o="capture identify alias people.set people.set_once set_config register register_once unregister opt_out_capturing has_opted_out_capturing opt_in_capturing reset isFeatureEnabled onFeatureFlags getFeatureFlag getFeatureFlagPayload reloadFeatureFlags group updateEarlyAccessFeatureEnrollment getEarlyAccessFeatures getActiveMatchingSurveys getSurveys".split(" "),
-        n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
-      posthog.init('phc_8n2yUH8bXDrS4QhzNsA0sRfVW6tWCc2C5w3e2dpSjcg',{api_host:'https://app.posthog.com'})
-    </script>
-  </body>
-  {{ end }}
-</html>
+    </div>
+  </div>
+</nav>

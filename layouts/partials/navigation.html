@@ -1,30 +1,41 @@
 {{ $currentPage := . }}
-<!-- Single row nav bar with evenly spaced items, same purple background -->
-<nav class="w-full bg-sitePurple text-white py-3 shadow-md">
-  <div class="flex items-center justify-evenly">
-    <!-- Left item: Avatar linking home -->
-    <a class="flex-shrink-0" href="{{ "/" | absURL }}">
-      {{ $img := resources.Get "images/avatar.jpg" | resources.Fingerprint }}
-      <img
-        class="rounded-full h-12 w-12 hover:rotate-12 duration-500 transition-all"
-        alt="Evan's avatar"
-        src="{{ $img.Permalink }}"
-      />
-    </a>
-
-    <!-- Menu items spaced evenly in the same row -->
-    <ul class="flex space-x-6 font-medium">
-      {{ range .Site.Menus.main }}
-      <li>
-        <a
-          href="{{ .URL }}"
-          class="text-white hover:text-gray-200 transition-colors
-                 {{ if hasPrefix $currentPage.RelPermalink .URL }} underline {{ end }}"
-        >
-          {{ .Name }}
-        </a>
-      </li>
-      {{ end }}
-    </ul>
+<!-- Top-level nav container: horizontally centered, some padding -->
+<nav class="w-full flex justify-center py-4">
+  <!-- A max-width container that holds two separate "floating boxes" side by side -->
+  <div class="max-w-6xl flex items-center space-x-8 px-4">
+    
+    <!-- Box for your avatar (profile pic) -->
+    <div class="border border-transparent bg-white/10 
+                backdrop-blur-md rounded-md shadow-md p-3 flex-shrink-0">
+      <a href="{{ "/" | absURL }}" class="block">
+        {{ $img := resources.Get "images/avatar.jpg" | resources.Fingerprint }}
+        <img 
+          class="rounded-full h-12 w-12 hover:rotate-12 
+                 transition-transform duration-300"
+          alt="Your profile photo"
+          src="{{ $img.Permalink }}"
+        />
+      </a>
+    </div>
+    
+    <!-- Box for your tabs (menu items) -->
+    <div class="border border-transparent bg-white/10 
+                backdrop-blur-md rounded-md shadow-md p-3 flex space-x-6">
+      <ul class="flex space-x-6 items-center">
+        {{ range .Site.Menus.main }}
+        <li>
+          <!-- If you want link styling changes, adjust here -->
+          <a
+            href="{{ .URL }}"
+            class="text-white font-semibold hover:text-gray-200 transition-colors
+                   {{ if hasPrefix $currentPage.RelPermalink .URL }} underline {{ end }}"
+          >
+            {{ .Name }}
+          </a>
+        </li>
+        {{ end }}
+      </ul>
+    </div>
+    
   </div>
 </nav>

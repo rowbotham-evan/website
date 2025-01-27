@@ -1,41 +1,51 @@
-{{ $currentPage := . }}
-<!-- Top-level nav container: horizontally centered, some padding -->
-<nav class="w-full flex justify-center py-4">
-  <!-- A max-width container that holds two separate "floating boxes" side by side -->
-  <div class="max-w-6xl flex items-center space-x-8 px-4">
-    
-    <!-- Box for your avatar (profile pic) -->
-    <div class="border border-transparent bg-white/10 
-                backdrop-blur-md rounded-md shadow-md p-3 flex-shrink-0">
-      <a href="{{ "/" | absURL }}" class="block">
-        {{ $img := resources.Get "images/avatar.jpg" | resources.Fingerprint }}
-        <img 
-          class="rounded-full h-12 w-12 hover:rotate-12 
-                 transition-transform duration-300"
-          alt="Your profile photo"
-          src="{{ $img.Permalink }}"
-        />
-      </a>
-    </div>
-    
-    <!-- Box for your tabs (menu items) -->
-    <div class="border border-transparent bg-white/10 
-                backdrop-blur-md rounded-md shadow-md p-3 flex space-x-6">
-      <ul class="flex space-x-6 items-center">
-        {{ range .Site.Menus.main }}
-        <li>
-          <!-- If you want link styling changes, adjust here -->
+<!-- navigation.html -->
+<nav class="w-full flex justify-center fixed top-4 z-50">
+  <!-- Main container that matches content width -->
+  <div class="max-w-xl w-full mx-auto px-4">
+    <!-- Floating glass container with blur effect -->
+    <div class="bg-white/10 backdrop-blur-md rounded-xl shadow-lg 
+                border border-white/20 p-4
+                transition-all duration-300 hover:bg-white/15">
+      
+      <div class="flex items-center justify-between gap-6">
+        <!-- Profile section -->
+        <div class="flex-shrink-0">
+          <a href="{{ "/" | absURL }}" class="block">
+            {{ $img := resources.Get "images/avatar.jpg" | resources.Fingerprint }}
+            <img 
+              class="h-12 w-12 rounded-full ring-2 ring-white/50
+                     hover:scale-110 hover:rotate-12 
+                     transition-all duration-300 ease-in-out"
+              alt="Your profile photo"
+              src="{{ $img.Permalink }}"
+            />
+          </a>
+        </div>
+
+        <!-- Navigation links -->
+        <div class="flex items-center gap-8">
+          {{ range .Site.Menus.main }}
           <a
             href="{{ .URL }}"
-            class="text-white font-semibold hover:text-gray-200 transition-colors
-                   {{ if hasPrefix $currentPage.RelPermalink .URL }} underline {{ end }}"
+            class="text-white/90 font-medium text-sm tracking-wide
+                   hover:text-white hover:scale-105
+                   transition-all duration-200
+                   {{ if hasPrefix $currentPage.RelPermalink .URL }}
+                     border-b-2 border-white/70
+                   {{ end }}"
           >
             {{ .Name }}
           </a>
-        </li>
-        {{ end }}
-      </ul>
+          {{ end }}
+        </div>
+      </div>
     </div>
-    
   </div>
 </nav>
+
+<!-- Add top padding to your baseof.html main content to account for fixed nav -->
+<style>
+  body > section {
+    padding-top: 5rem;
+  }
+</style>

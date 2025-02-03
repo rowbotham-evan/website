@@ -16,8 +16,8 @@ module.exports = {
         customBackground: colors.amber,
 
         // New custom purple for background and other elements
-        sitePurple: '#2c0061',
-        darkSitePurple: '#1a0037' // For dark mode
+        sitePurple: '#1c1c1c',
+        darkSitePurple: '#1c1c1c' // For dark mode
       },
     },
     fontFamily: {

@@ -1,50 +1,38 @@
+{{/* Adjust these values as needed */}}
+{{ $navWidth := "600px" }}  <!-- Overall horizontal length -->
+{{ $navHeight := "100px" }}  <!-- Overall vertical height -->
 {{ $currentPage := $.Page }}
 
-<nav class="w-full fixed top-4 z-50">
-  <!-- Outer container matching the same width constraints as your content -->
-  <div class="max-w-6xl mx-auto px-4">
-    <!-- Center the inner container on medium+ screens, just like the content -->
-    <div class="md:flex md:justify-center">
-      <!-- Constrain width just like your main text container -->
-      <div class="md:min-w-xl md:max-w-xl mx-auto
-                  bg-white/10 backdrop-blur-md rounded-xl shadow-lg
-                  border border-white/20 p-4
-                  transition-all duration-300 hover:bg-white/15">
+<nav class="fixed top-4 z-50" style="width: 100%;">
+  <div class="max-w-6xl mx-auto">
+    <!-- Navigation container with explicit width/height and no internal padding -->
+    <div class="bg-white/10 backdrop-blur-md rounded-xl shadow-lg border border-transparent p-0 box-border transition-all duration-300 hover:bg-white/15"
+         style="width: {{ $navWidth }}; height: {{ $navHeight }}; margin: 0 auto;">
+      <!-- Flex container to evenly distribute children -->
+      <div class="flex items-center justify-evenly w-full h-full">
         
-        <!-- Flex row for profile pic + nav links -->
-        <div class="flex items-center gap-6">
-          <!-- Profile section (left) -->
-          <div class="flex-shrink-0">
-            <a href="{{ "/" | relURL }}" class="block">
-              {{ $img := resources.Get "images/avatar.jpg" | resources.Fingerprint }}
-              <img
-                class="h-12 w-12 rounded-full ring-2 ring-white/50
-                       hover:scale-110 hover:rotate-12
-                       transition-all duration-300 ease-in-out"
-                alt="Your profile photo"
-                src="{{ $img.Permalink }}"
-              />
-            </a>
-          </div>
-
-          <!-- Navigation links (evenly spaced) -->
-          <div class="flex-1 flex items-center justify-evenly">
-            {{ range .Site.Menus.main }}
-            <a
-              href="{{ .URL }}"
-              class="text-white/90 font-medium text-sm tracking-wide
-                     hover:text-white hover:scale-105
-                     transition-all duration-200
-                     {{ if hasPrefix $currentPage.RelPermalink .URL }}
-                       border-b-2 border-white/70
-                     {{ end }}"
-            >
-              {{ .Name }}
-            </a>
-            {{ end }}
-          </div>
-
+        <!-- Fixed-size Profile Picture Container -->
+        <div class="flex-none">
+          <a href="{{ .Site.BaseURL }}" class="block">
+            {{ $img := resources.Get "images/avatar.jpg" | resources.Fingerprint }}
+            <!-- This container forces the profile pic to be 64x64 (h-16 = 4rem, w-16 = 4rem) -->
+            <div class="w-16 h-16 rounded-full overflow-hidden ring-2 ring-white">
+              <img class="w-full h-full object-cover transition-all duration-300 ease-in-out hover:scale-110 hover:rotate-12"
+                   alt="Your profile photo"
+                   src="{{ $img.Permalink }}" />
+            </div>
+          </a>
         </div>
+        
+        <!-- Navigation Tabs (each tab is a flex item) -->
+        {{ range .Site.Menus.main }}
+          <a href="{{ .URL }}"
+             class="flex-none text-white font-medium text-sm tracking-wide transition-all duration-200 hover:text-white hover:scale-105
+                    {{ if hasPrefix $currentPage.RelPermalink .URL }}border-b-2 border-white{{ end }}">
+            {{ .Name }}
+          </a>
+        {{ end }}
+        
       </div>
     </div>
   </div>

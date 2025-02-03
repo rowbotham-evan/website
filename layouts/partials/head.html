@@ -1,7 +1,3 @@
-{{/* --------------------------------------------- */}}
-{{/* Rewritten head.html using css.PostCSS       */}}
-{{/* --------------------------------------------- */}}
-
 {{ $title := cond (eq ($.Param "supertitle") nil)
   (printf `%s | %s` (default (truncate 64 .Summary) .Title) .Site.Title)
   ($.Param "supertitle") | htmlUnescape
@@ -18,8 +14,7 @@
 <meta property="og:title" content="{{ $title }}" />
 <meta property="og:url" content="{{ .Permalink }}" />
 
-<!-- Replace with your own domain if desired -->
-<link rel="canonical" href="https://miles.land{{ .Permalink }}" />
+<link rel="canonical" href="{{ .Permalink }}" />
 
 {{ if (not (eq ($.Param "redirect") nil)) }}
   <meta http-equiv="refresh" content="0; URL={{ $.Param "redirect" }}" />

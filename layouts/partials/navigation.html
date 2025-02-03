@@ -15,7 +15,7 @@
         <div class="flex items-center gap-6">
           <!-- Profile section (left) -->
           <div class="flex-shrink-0">
-            <a href="{{ "/" | absURL }}" class="block">
+            <a href="{{ "/" | relURL }}" class="block">
               {{ $img := resources.Get "images/avatar.jpg" | resources.Fingerprint }}
               <img
                 class="h-12 w-12 rounded-full ring-2 ring-white/50

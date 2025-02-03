@@ -5,10 +5,12 @@ category: Internship
 tags: ["design", "css", "open source", "recurse"]
 dateOverride: "July 2023 – Present"
 showRelatedTag: a17t
-date: 2020-04-10T21:49:53Z
+date: 2023-07-20T21:49:53Z
 highlightSubtitle: true
 weight: 1
 ---
+
+<br>
 
 These past five months, I have been working in [The Billinge Group](https://thebillingegroup.com/). Broadly, I have been contributing to solving the [nanostructure problem](https://physics.aps.org/articles/v3/25), through maintaining and deploying  packages (old and new) within our Atomic Structure Analysis Software, [Diffpy](https://www.diffpy.org/).
  

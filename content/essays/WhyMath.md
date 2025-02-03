@@ -4,7 +4,7 @@ tags: ["stanford", "growth", "advice"]
 date: 2023-11-28
 draft: false
 ---
-
+<br>
 Initially, I wanted to study philosophy at university. Philosophy, I thought was the closest I could get to the two things I have been chasing my entire life: truth and understanding. But then my Dad was nervous about me finding a job and heavily encouraged me to study something else. So, I decided to study what people always told me I had a knack for and for what I thought was as close as I could get to philosophy, math. To be a philosopher is to attempt to formalize visceral and intuitive experiences into precise language and axioms; replace experiences with phenomena, and language with abstract symbols, and we pretty much arrive at math. 
 
 Being in my second year, I think studying applied math was the best decision. Undergrad, is about gaining extremely broad knowledge, and to train one’s mind with select problem-solving approaches. Math’s job is identifying patterns that allow for us to be both be as general and precise as possible – an invaluable skill for any thinker. If we only retain 15% of what we learn in college, why not pick the most challenging subject? In other words, if the knowledge output does not really matter so much, why not choose the subject that has the most cognitively demanding input? 

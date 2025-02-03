@@ -2,7 +2,7 @@
 title: "The Age-Wisdom Paradox"
 tags: ["stanford", "growth", "advice"]
 date: 2024-01-25
-draft: false
+draft: true
 ---
 
 I heard a friend’s parent recently said something that piqued my interest, “If I do not know my job by now, [20 years] shame on me.” Well, what would I, a nineteen-year-old, know about life’s struggles, professional obstacles, and ? Besides a short internship, probably nothing tangible or directly applicable. 

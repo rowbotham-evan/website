@@ -3,6 +3,8 @@ title: "Quotes"
 subtitle:
 ---
 
+<br>
+
 "Do the best until you know better. Then when you know better, do better." <br>
 *Maya Angelou*
 

@@ -9,18 +9,23 @@
 {{ define "main" }}
 <main class="-mt-[3px]">
   {{ if (gt (len .Content) 0) }}
-  <section class="mb-12 content">
-    {{ .Content }}
-  </section>
+    <section class="mb-12 content">
+      {{ .Content }}
+    </section>
   {{ end }}
 
   <section>
+    {{/* First sort pages by date (descending) */}}
+    {{ $pages := .Pages.ByDate.Reverse }}
+
     {{ if (not (eq ($.Param "grouping") nil)) }}
-      {{ range .Pages.GroupByParam ($.Param "grouping") }}
+      {{/* Group pages by the provided parameter if one exists */}}
+      {{ range $pages.GroupByParam ($.Param "grouping") }}
         {{ partial "list-group.html" . }}
       {{ end }}
     {{ else }}
-      {{ range .Pages.GroupByDate "Jan ’06" }}
+      {{/* Otherwise group pages by their date using a custom format */}}
+      {{ range $pages.GroupByDate "Jan ’06" }}
         {{ partial "list-group.html" . }}
       {{ end }}
     {{ end }}

@@ -1,11 +1,11 @@
-<!-- ==================== Desktop Navigation ==================== -->
-<div id="desktop-nav">
+<!-- ==================== Desktop Navigation (Unchanged) ==================== -->
+<div class="hidden md:block">
   {{/* Adjust these values as needed */}}
   {{ $navWidth := "600px" }}  <!-- Overall horizontal length -->
   {{ $navHeight := "100px" }}  <!-- Overall vertical height -->
   {{ $currentPage := $.Page }}
 
-  <nav class="fixed top-4 z-50" style="width: 100%;">
+  <nav class="fixed top-4 z-50 w-full">
     <div class="max-w-6xl mx-auto">
       <!-- Navigation container with explicit width/height and no internal padding -->
       <div class="bg-white/10 backdrop-blur-md rounded-xl shadow-lg border border-transparent p-0 box-border transition-all duration-300 hover:bg-white/15"
@@ -17,7 +17,7 @@
           <div class="flex-none">
             <a href="{{ .Site.BaseURL }}" class="block">
               {{ $img := resources.Get "images/avatar.jpg" | resources.Fingerprint }}
-              <!-- This container forces the profile pic to be 64x64 (h-16 = 4rem, w-16 = 4rem) -->
+              <!-- Forces the profile pic to be 64x64 -->
               <div class="w-16 h-16 rounded-full overflow-hidden ring-2 ring-white">
                 <img class="w-full h-full object-cover transition-all duration-300 ease-in-out hover:scale-110 hover:rotate-12"
                      alt="Your profile photo"
@@ -42,15 +42,7 @@
 </div>
 
 <!-- ==================== Mobile Navigation ==================== -->
-<!--
-  This is a mobile-optimized version of the navigation.
-  It uses Alpine.js for toggling the hamburger menu sidebar.
-  
-  (Make sure to include Alpine.js in your site's <head> like so:
-    <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
-  )
--->
-<div id="mobile-nav" style="display: none;" x-data="{ open: false }">
+<div class="block md:hidden" x-data="{ open: false }">
   
   <!-- Mobile Top Bar -->
   <nav class="fixed top-4 z-50 w-full">
@@ -63,7 +55,7 @@
         </div>
       </a>
       <!-- Hamburger Button -->
-      <button @click="open = true" class="text-white focus:outline-none">
+      <button @click="open = !open" class="text-white focus:outline-none">
         <svg class="w-8 h-8" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"
              xmlns="http://www.w3.org/2000/svg">
           <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"></path>
@@ -73,8 +65,8 @@
   </nav>
   
   <!-- Mobile Sidebar / Drawer -->
-  <div x-show="open" class="fixed inset-0 z-40" style="display: none;">
-    <!-- Backdrop: clicking it closes the sidebar -->
+  <div x-show="open" x-cloak class="fixed inset-0 z-50">
+    <!-- Backdrop: clicking it will close the sidebar -->
     <div class="fixed inset-0 bg-black opacity-50" @click="open = false"></div>
     <!-- Sidebar panel (right-aligned) -->
     <div class="absolute right-0 top-0 h-full w-64 bg-white/10 backdrop-blur-md shadow-lg p-4">
@@ -98,24 +90,3 @@
   </div>
   
 </div>
-
-<!-- ==================== Inline Script to Toggle Navigation ==================== -->
-<script>
-  // Function to check the window width and toggle nav displays.
-  function updateNavDisplay() {
-    // Adjust breakpoint as needed (here, 768px is used)
-    if (window.innerWidth < 768) {
-      document.getElementById('desktop-nav').style.display = 'none';
-      document.getElementById('mobile-nav').style.display = 'block';
-    } else {
-      document.getElementById('desktop-nav').style.display = 'block';
-      document.getElementById('mobile-nav').style.display = 'none';
-    }
-  }
-  
-  // Run the check when the page loads.
-  updateNavDisplay();
-  
-  // Optionally, update the nav on window resize.
-  window.addEventListener('resize', updateNavDisplay);
-</script>

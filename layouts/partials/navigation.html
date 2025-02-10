@@ -41,52 +41,48 @@
   </nav>
 </div>
 
-<!-- ==================== Mobile Navigation ==================== -->
+<!-- Mobile Navigation: Only visible on small screens -->
 <div class="block md:hidden" x-data="{ open: false }">
-  
   <!-- Mobile Top Bar -->
   <nav class="fixed top-4 z-50 w-full">
     <div class="max-w-6xl mx-auto flex items-center justify-between p-4">
-      <!-- Profile Picture (smaller for mobile) -->
+      <!-- Profile Picture -->
       <a href="{{ .Site.BaseURL }}" class="block">
         {{ $img := resources.Get "images/avatar.jpg" | resources.Fingerprint }}
-        <div class="w-10 h-10 rounded-full overflow-hidden ring-2 ring-white transition-all duration-300 ease-in-out hover:scale-110 hover:rotate-12">
-          <img class="w-full h-full object-cover" alt="Your profile photo" src="{{ $img.Permalink }}" />
+        <div class="w-10 h-10 rounded-full overflow-hidden ring-2 ring-white">
+          <img class="w-full h-full object-cover" src="{{ $img.Permalink }}" alt="Your profile photo">
         </div>
       </a>
       <!-- Hamburger Button -->
-      <button @click="open = !open" class="text-white focus:outline-none">
-        <svg class="w-8 h-8" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"
-             xmlns="http://www.w3.org/2000/svg">
+      <button @click="open = !open" class="text-white focus:outline-none z-50">
+        <svg class="w-8 h-8" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"></path>
         </svg>
       </button>
     </div>
   </nav>
-  
+
   <!-- Mobile Sidebar / Drawer -->
-  <div x-show="open" x-cloak class="fixed inset-0 z-50">
-    <!-- Backdrop: clicking it will close the sidebar -->
+  <div x-show="open" x-transition x-cloak class="fixed inset-0 z-40">
+    <!-- Backdrop: clicking it closes the sidebar -->
     <div class="fixed inset-0 bg-black opacity-50" @click="open = false"></div>
     <!-- Sidebar panel (right-aligned) -->
     <div class="absolute right-0 top-0 h-full w-64 bg-white/10 backdrop-blur-md shadow-lg p-4">
       <!-- Close Button -->
       <button @click="open = false" class="text-white focus:outline-none mb-4">
-        <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"
-             xmlns="http://www.w3.org/2000/svg">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path>
         </svg>
       </button>
       <!-- Navigation Links -->
       <nav class="flex flex-col space-y-4">
         {{ range .Site.Menus.main }}
-          <a href="{{ .URL }}"
-             class="text-white font-medium text-sm tracking-wide transition-all duration-200 hover:text-white hover:scale-105">
+          <a href="{{ .URL }}" class="text-white font-medium text-sm tracking-wide transition-all duration-200 hover:text-white hover:scale-105">
             {{ .Name }}
           </a>
         {{ end }}
       </nav>
     </div>
   </div>
-  
 </div>
+

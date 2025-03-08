@@ -3,17 +3,18 @@ title: "RL Trading Model"
 subtitle: "Floating Point Group"
 category: Internship
 tags: ["college", "zoom"]
-dateOverride: "May 2022 – Jun 2023"
+dateOverride: "Jun 2023"
 showRelatedTag: 
-date: 2023-07-11T02:41:51Z
+date: 2023-06-01T02:41:51Z
 highlightSubtitle: true
 weight: 2
 ---
 
-<br>
+<br> 
 
-Under Construction. 
+This is an interesting tidbit. Floating Point Group–a crypto startup–was the first ever internship I got my freshman year of college. I was assigned to the trading team and working on implementing a RL algorithm (inspired by the [Almgren-Chriss Model](https://github.com/viai957/Optimal-Portfolio-Transactions/blob/master/Almgren%20and%20Chriss%20Model.ipynb)) to reduce slippage. 
 
-Over the summer I got work as a data science intern for a crypto hedge fund, [Floating Point Group](https://www.floating.group/).
+Unforunately, a week into my internship FPG got hacked for 20mm. An [article](https://www.coindesk.com/business/2023/06/14/crypto-prime-broker-fpg-loses-up-to-20m-in-cyber-attack) was published that week, detailing the specifics of the incident. ([another later article](https://blockworks.co/news/floating-point-up-against-wall)) Shortly after, FPG terminated my internship and eventually went backrupt. 
 
-* ADD 
+Overall, an insane story, but I'm grateful that I made some cool friends from FPG that I still talk to!
+

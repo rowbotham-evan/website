@@ -3,7 +3,7 @@ title: "Applied Physics Research"
 subtitle: "Columbia University"
 category: Internship
 tags: ["design", "css", "open source", "recurse"]
-dateOverride: "July 2023 – Present"
+dateOverride: "Jul 2023 – Jan 2024"
 showRelatedTag: a17t
 date: 2023-07-20T21:49:53Z
 highlightSubtitle: true

@@ -12,11 +12,15 @@ weight: 3
 
 <br>
 
-This summer (2024), I worked at Wharton's [Computational Social Science Lab](https://css.seas.upenn.edu/), specifically under [Emily Hu](https://xinlanemilyhu.com/). The CSS Lab – headed by [Duncan Watts](https://www.asc.upenn.edu/people/faculty/duncan-j-watts-phd) – is interested in finding ways to operationalize social science in order to provide more [solution oriented](https://www.nature.com/articles/s41562-016-0015) answers to social problems. Emily's group specific focuses on team dynamics: how to measure conflict, when can teams able to transcend disagreements, and . 
+This summer (2024), I worked at Wharton's [Computational Social Science Lab](https://css.seas.upenn.edu/), specifically under [Emily Hu](https://xinlanemilyhu.com/). The CSS Lab – headed by [Duncan Watts](https://www.asc.upenn.edu/people/faculty/duncan-j-watts-phd) – is interested in finding ways to operationalize social science in order to provide more [solution oriented](https://www.nature.com/articles/s41562-016-0015) answers to social problems. In Emily's group we apply ML, CS, and Network Science models (and principles) to operationalize and better understand team dynamics.
 
 
-*
-*
-*
-*
+* Co-authored a paper that was accepted in NeurIPS's 2024 Conference: [What you say or how you say it? Predicting Conflict Outcomes in Real and LLM-Generated Conversations](https://arxiv.org/abs/2409.09338)
+* Gave a talk presenting my research at the [Leadership Alliance National Symposium (LANS)](https://theleadershipalliance.org/leadership-alliance-national-symposium-0)
+* We published our [Team Commincation Toolkit](https://teamcommtools.seas.upenn.edu/), which can be installed via [PyPI](https://pypi.org/project/team-comm-tools/) or our [Github repo](https://github.com/Watts-Lab/team_comm_tools)
+
+
+
+(*Aside*) Got to volunteer for the [International Conference on Computational Social Science, 2024!](https://ic2s2-2024.org/) (IC<sup>2</sup>S<sup>2</sup>)
+
 

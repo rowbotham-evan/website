@@ -1,6 +1,6 @@
 ---
 grouping: category
-title: "Experience."
+title: "Experiences."
 subtitle:
 ---
 

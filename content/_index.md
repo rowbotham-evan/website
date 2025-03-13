@@ -16,4 +16,4 @@ My interests are wide ranging, so it's more accurate to say I just enjoy talking
 
 My most current side obsession is learning about the different "interpretations" (and thus different ontological commitments) of quantum mechanics. 
 
-Please reach out @ evanrj.personal@gmail.com or DM me on [X](https://x.com/evanrow_), I love making new friends!
+Let's chat: [30 Min Coffee Chat](https://calendly.com/rowbotham-evan/coffee-chat) or DM me on [X](https://x.com/evanrow_). I love making new friends!

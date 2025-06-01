@@ -10,5 +10,7 @@ export default defineConfig({
       providerImportSource: '@mdx-js/react',
       jsxRuntime: 'automatic'
     })
-  ]
+  ],
+  // Add this line to specify the base path for deployment
+  base: '/website/', // <--- THIS IS THE CRUCIAL CHANGE
 });

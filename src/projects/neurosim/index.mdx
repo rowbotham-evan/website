@@ -1,0 +1,79 @@
+export const meta = {
+  title:     "Retinal Neuron",
+  date:      "2025-04-01",
+  blurb:     "How does a single neuron 'see'?",
+  theme:     "BIOPHYSICS",
+  thumbnail: "/images/retinal_neuron.png",
+  draft:     false,
+  themeBg:    "#0096FF",      // Example: Tomato red background
+  themeColor: "#FFFFFF",       // Example: White text
+  githubRepo: "https://github.com/rowbotham-evan/website"
+}
+
+import { useRef, useEffect, useState } from "react";
+import * as d3 from "d3";
+
+export const BarDemo = () => {
+  const svgRef = useRef();
+  const [tooltipContent, setTooltipContent] = useState("");
+  const [tooltipStyle, setTooltipStyle] = useState({ opacity: 0, left: 0, top: 0 });
+
+  useEffect(() => {
+    const svg = d3.select(svgRef.current)
+      .attr("width", 400)
+      .attr("height", 120);
+
+    svg.selectAll("*").remove();
+
+    const data = [4, 8, 15, 16, 23, 42];
+
+    svg.selectAll("rect")
+      .data(data)
+      .enter()
+      .append("rect")
+      .attr("x", (_, i) => i * 65)
+      .attr("y", d => 120 - d * 4)
+      .attr("width", 50)
+      .attr("height", d => d * 4)
+      .attr("fill", "steelblue")
+      .on("mouseover", function(event, d) {
+        d3.select(this).attr("fill", "orange");
+        setTooltipContent(`Value: ${d}`);
+        setTooltipStyle({
+          opacity: 1,
+          left: event.pageX + 10,
+          top: event.pageY - 20
+        });
+      })
+      .on("mouseout", function() {
+        d3.select(this).attr("fill", "steelblue");
+        setTooltipStyle({ opacity: 0 });
+      });
+
+  }, []);
+
+  return (
+    <>
+      <svg ref={svgRef}></svg>
+      <div
+        style={{
+          position: "absolute",
+          background: "rgba(0, 0, 0, 0.7)",
+          color: "white",
+          padding: "5px 10px",
+          borderRadius: "4px",
+          pointerEvents: "none",
+          ...tooltipStyle
+        }}
+      >
+        {tooltipContent}
+      </div>
+    </>
+  );
+}
+
+<p>Here’s an interactive bar-chart rendered with **D3** inside MDX:</p>
+
+<BarDemo />
+
+<p>Continue writing your project write-up here…</p>

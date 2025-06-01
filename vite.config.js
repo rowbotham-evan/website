@@ -4,6 +4,7 @@ import react from '@vitejs/plugin-react';
 import mdx from '@mdx-js/rollup'; 
 
 export default defineConfig({
+  base: '/website/',
   plugins: [
     react(),
     mdx({

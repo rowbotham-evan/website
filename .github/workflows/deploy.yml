@@ -22,6 +22,7 @@ jobs:
       - run: npm run build   # Vite → dist/
 
       - run: touch dist/.nojekyll  # disable Jekyll
+      - run: cp dist/index.html dist/404.html
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3

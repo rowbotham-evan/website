@@ -1,10 +1,11 @@
 // src/pages/ProjectDetail.jsx
-import React from "react"; // Reverted to just React, removing useState, useEffect, useRef
+import React from "react";
 import { useParams, Navigate, Link } from "react-router-dom";
 import { projects } from "../contentRegistry";
 import theme from "../theme";
 import { MDXProvider } from "@mdx-js/react";
 import GitHubLink from "../components/GitHubLink";
+import MdxImage from '../components/MdxImage'; // <--- IMPORT THE NEW COMPONENT
 
 function formatDate(dateStr = "") {
   if (!dateStr) return "";
@@ -24,24 +25,18 @@ export default function ProjectDetail() {
 
   const MDXContent = entry.component;
 
-  // --- ADJUSTABLE VARIABLES FOR HEADER CARD ---
-  const headerCardWidth = "700px"; // You can set to "auto" or "90%" for responsiveness
-  const headerCardMinHeight = "-1px"; // Minimum height of the header box
+  const headerCardWidth = "700px";
+  const headerCardMinHeight = "-1px";
   const headerCardPadding = "10px";
   const headerCardBorderColor = "#000000";
   const headerCardBackgroundColor = "#f9f9f9";
   const headerCardBorderRadius = "0px";
   const headerCardBoxShadow = "0 4px 8px rgba(0,0,0,0.08)";
+  const imageSize = "200px";
+  const imageMarginRight = "10px";
+  const githubIconHeaderSize = 24;
+  const thumbnailOffsetLeft = "20px";
 
-  const imageSize = "200px"; // Size of the thumbnail image (width and height)
-  const imageMarginRight = "10px"; // Space between image and text block
-
-  const githubIconHeaderSize = 24; // Adjust this value as needed for the header
-  // Reverted to a fixed value for thumbnailOffsetLeft, you can adjust this manually
-  const thumbnailOffsetLeft = "20px"; // Controls the left spacing of the thumbnail and content.
-  // --- END ADJUSTABLE VARIABLES ---
-
-  // Function to extract "username/repo" from a full GitHub URL
   const getGitHubRepoPath = (fullUrl) => {
     if (!fullUrl) return null;
     try {
@@ -63,7 +58,6 @@ export default function ProjectDetail() {
 
   const githubRepoPath = getGitHubRepoPath(entry.githubRepo);
 
-  // Define components to override/style within MDX
   const mdxComponents = {
     a: (props) => (
       <a
@@ -81,6 +75,7 @@ export default function ProjectDetail() {
     h1: (props) => <h1 {...props} style={{ ...props.style, fontFamily: theme.fonts.heading.family }} />,
     h2: (props) => <h2 {...props} style={{ ...props.style, fontFamily: theme.fonts.heading.family }} />,
     h3: (props) => <h3 {...props} style={{ ...props.style, fontFamily: theme.fonts.heading.family }} />,
+    img: MdxImage, // <--- DIRECT ALL <img> TAGS TO YOUR NEW COMPONENT
   };
 
   return (
@@ -106,16 +101,16 @@ export default function ProjectDetail() {
           gap: imageMarginRight,
           marginBottom: "10px",
           width: "100%",
-          paddingLeft: thumbnailOffsetLeft, // Uses the fixed, adjustable value
+          paddingLeft: thumbnailOffsetLeft,
         }}>
           {entry.thumbnail && (
             <img
               src={entry.thumbnail}
               alt={entry.title}
               style={{
-                width:        imageSize,
-                height:       imageSize,
-                objectFit:    "contain",
+                width:         imageSize,
+                height:        imageSize,
+                objectFit:     "contain",
                 objectPosition: "center",
                 borderRadius: 4,
                 flexShrink: 0,
@@ -123,42 +118,37 @@ export default function ProjectDetail() {
               }}
             />
           )}
-          {/* Removed ref from this div as it's no longer needed for dynamic measurement */}
           <div style={{ display: "flex", flexDirection: "column", flexGrow: 1 }}>
-            {/* Title and Theme Label */}
             <div style={{ display: "inline-flex", alignItems: "center", gap: 8 }}>
               <h1 style={{ margin: 0, fontSize: theme.fonts.heading.h2, fontFamily: theme.fonts.heading.family }}>{entry.title}</h1>
               {entry.theme && (
                 <span
                   style={{
-                    padding:        "4px 8px",
-                    fontSize:       theme.fonts.body.small,
+                    padding:         "4px 8px",
+                    fontSize:        theme.fonts.body.small,
                     borderRadius: 4,
-                    background:     entry.themeBg      || "#e5e5e5",
-                    color:          entry.themeColor || "#000",
-                    fontWeight:     600,
+                    background:      entry.themeBg      || "#e5e5e5",
+                    color:           entry.themeColor || "#000",
+                    fontWeight:      600,
                     fontFamily: theme.fonts.body.family,
                   }}
                 >
-                  {entry.theme}
+                    {entry.theme}
                 </span>
               )}
             </div>
-
-            {/* Container for Date and GitHub Icon, side-by-side */}
             <div style={{
-                marginTop: "4px", // Space below title/theme
+                marginTop: "4px",
                 display: "flex",
                 alignItems: "center",
-                gap: "10px" // Space between date and icon
+                gap: "10px"
             }}>
-              {/* GitHubLink is positioned before the date span */}
               {githubRepoPath && (
                 <GitHubLink repo={githubRepoPath} size={githubIconHeaderSize} />
               )}
               {entry.date && (
                 <span style={{ fontStyle: "italic", color: "#666", fontSize: theme.fonts.body.small, fontFamily: theme.fonts.body.family }}>
-                  {formatDate(entry.date)}
+                    {formatDate(entry.date)}
                 </span>
               )}
             </div>
@@ -168,7 +158,7 @@ export default function ProjectDetail() {
 
       {entry.blurb && (
         <p style={{ fontStyle: "italic", marginBottom: 24, fontSize: theme.fonts.body.large, fontFamily: theme.fonts.body.family }}>
-          {entry.blurb}
+            {entry.blurb}
         </p>
       )}
 
@@ -178,7 +168,7 @@ export default function ProjectDetail() {
 
       <p style={{ marginTop: 40 }}>
         <Link to="/projects" style={{ color: theme.accent, textDecoration: "none", fontSize: theme.fonts.body.medium, fontFamily: theme.fonts.body.family }}>
-          ← Back to Projects
+            ← Back to Projects
         </Link>
       </p>
     </article>

@@ -1,17 +1,25 @@
+// src/projects/retinal-neuron.mdx
+
 export const meta = {
-  title:     "Retinal Neuron",
-  date:      "2025-04-01",
-  blurb:     "How does a single neuron 'see'?",
-  theme:     "BIOPHYSICS",
-  thumbnail: "/images/retinal_neuron.png",
-  draft:     false,
-  themeBg:    "#0096FF",      // Example: Tomato red background
-  themeColor: "#FFFFFF",       // Example: White text
-  githubRepo: "https://github.com/rowbotham-evan/website"
+  title: "Retinal Neuron",
+  date: "2025-04-01",
+  blurb: "How does a single neuron 'see'?",
+  theme: "BIOPHYSICS",
+  // KEEP THIS PATH—works for the thumbnail
+  thumbnail: "public/images/retinal_neuron.png", 
+  draft: false,
+  themeBg: "#0096FF",
+  themeColor: "#FFFFFF",
+  githubRepo: "https://github.com/rowbotham-evan/website",
 }
+
+// REMOVE THIS LINE if it was still there: import.meta.env.BASE_URL;
+// It's not needed directly in MDX if MdxImage is handling it.
 
 import { useRef, useEffect, useState } from "react";
 import * as d3 from "d3";
+import MdxImage from '/src/components/MdxImage';
+
 
 export const BarDemo = () => {
   const svgRef = useRef();
@@ -23,6 +31,7 @@ export const BarDemo = () => {
       .attr("width", 400)
       .attr("height", 120);
 
+    // clear any prior render
     svg.selectAll("*").remove();
 
     const data = [4, 8, 15, 16, 23, 42];
@@ -36,20 +45,19 @@ export const BarDemo = () => {
       .attr("width", 50)
       .attr("height", d => d * 4)
       .attr("fill", "steelblue")
-      .on("mouseover", function(event, d) {
+      .on("mouseover", function (event, d) {
         d3.select(this).attr("fill", "orange");
         setTooltipContent(`Value: ${d}`);
         setTooltipStyle({
           opacity: 1,
           left: event.pageX + 10,
-          top: event.pageY - 20
+          top: event.pageY - 20,
         });
       })
-      .on("mouseout", function() {
+      .on("mouseout", function () {
         d3.select(this).attr("fill", "steelblue");
         setTooltipStyle({ opacity: 0 });
       });
-
   }, []);
 
   return (
@@ -63,17 +71,22 @@ export const BarDemo = () => {
           padding: "5px 10px",
           borderRadius: "4px",
           pointerEvents: "none",
-          ...tooltipStyle
+          ...tooltipStyle,
         }}
       >
         {tooltipContent}
       </div>
     </>
   );
-}
+};
 
 <p>Here’s an interactive bar-chart rendered with **D3** inside MDX:</p>
 
 <BarDemo />
 
-<p>Continue writing your project write-up here…</p>
+<p>Here is a diagram of the retinal neuron:</p>
+
+<MdxImage src="/images/retinal_neuron.png" alt="Retinal Neuron" />
+
+
+<p>Continue writing your project write‑up here…</p>

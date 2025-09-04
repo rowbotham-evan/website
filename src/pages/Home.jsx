@@ -103,9 +103,6 @@ export default function Home() {
       <p>
         My interests are wide ranging, so it’s more accurate to say I just enjoy talking to thoughtful, committed, and resilient people who push themselves to constantly grow, refine their world views, and give to others. (I especially enjoy learning about other people’s cultures!)
       </p>
-      <p>
-        My most current side obsession is learning about the different "interpretations" (and thus different ontological commitments) of quantum mechanics. 
-      </p>
       <p style={{ marginTop: 24 }}>
         <NavLink to="https://calendly.com/rowbotham-evan/coffee-chat"
             style={{

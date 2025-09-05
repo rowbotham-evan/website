@@ -9,7 +9,6 @@ import Projects        from "./pages/Projects";
 import ProjectDetail   from "./pages/ProjectDetail";
 import ContentDetail   from "./pages/ContentDetail";   // handles essays & experiences
 import Quotes          from "./pages/Quotes";
-import Shapes          from "./pages/Shapes";          // <-- NEW: Import your Shapes component
 
 export default function App() {
   return (
@@ -34,8 +33,6 @@ export default function App() {
         {/* Quotes */}
         <Route path="/quotes" element={<Quotes />} />
 
-        {/* NEW: Shapes Page */}
-        <Route path="/shapes" element={<Shapes />} />
       </Routes>
     </>
   );

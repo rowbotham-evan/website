@@ -5,12 +5,11 @@ export default function Nav() {
   const [open, setOpen] = useState(false);
 
   const tabs = [
-    { to: '/',            label: 'Home',      icon: true },
+    { to: '/',            label: '',      icon: true },
     { to: '/experience',  label: 'Experiences' },
     { to: '/projects',    label: 'Projects'    },
     { to: '/blog',        label: 'Essays'      },
     { to: '/quotes',      label: 'Quotes'      },
-    { to: '/shapes',      label: 'Shapes'      },
   ];
 
   return (

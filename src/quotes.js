@@ -6,6 +6,5 @@ export const quotes = [
   { text: "Study hard what interests you the most in the most undisciplined, irreverent and original manner possible.", author: "Richard Feynman"},
   { text: "In mathematics, our freedom lies in the questions we ask – and in how we pursue them – but not in the answers awaiting us.", author: "Steven Strogatz"},
   { text: "A winner is a dreamer who never gives up.", author: "Nelson Mandela"},
-  { text: "Do. Or do not. There is no try.", author: "Yoda"},
   // …
 ];

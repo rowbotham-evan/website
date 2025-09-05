@@ -43,7 +43,7 @@ p, a, li {
 
 /* ─── PROFILE AVATAR & CONTENT ────────────────────────────────── */
 .profile-container {
-  max-width: 480px;
+  max-width: 1000px;
   margin: 0 auto;
   padding: 16px;
 }
@@ -63,9 +63,9 @@ p, a, li {
 .nav-wrapper {
   position: relative;
   background: var(--card-bg);
-  padding: 12px 24px;
+  padding: 10px 20px;
   margin: 16px auto;
-  max-width: 500px;
+  max-width: 600px;
   border-radius: var(--radius);
   box-shadow: 0 4px 12px rgba(0,0,0,0.2);
 }
